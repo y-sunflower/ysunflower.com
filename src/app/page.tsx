@@ -1,6 +1,8 @@
 import Hero from "../components/Hero";
 import SunflowerAnimation from "../components/SunflowerAnimations";
 import PushButton from "../components/Button";
+import { packageList } from "../lists/packages-list";
+import PackageCard from "../components/PackageCard";
 
 export default function Home() {
   return (
@@ -51,6 +53,40 @@ export default function Home() {
       </section>
 
       <div id="opensource" style={{ marginBottom: "15rem" }}></div>
+
+      <section>
+        <div className="container">
+          <div className="opensource-text">
+            <h2>
+              <span className="bottom-line">
+                <span className="name">
+                  <span className="highlight">Open</span>{" "}
+                  <span className="highlight-secondary">source</span>
+                </span>
+              </span>
+            </h2>
+            <p>
+              Open source is at the core of{" "}
+              <span className="highlight">yellow</span>{" "}
+              <span className="highlight-secondary">sunflower</span>. All
+              projects are released under permissive licenses and designed to be
+              simple, useful, and easy to extend.
+            </p>
+          </div>
+          <div className="packages-grid">
+            {packageList.map(
+              ({ packageName, packageDescription, packageTags }) => (
+                <PackageCard
+                  key={packageName}
+                  packageName={packageName}
+                  packageDescription={packageDescription}
+                  packageTags={packageTags}
+                />
+              )
+            )}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

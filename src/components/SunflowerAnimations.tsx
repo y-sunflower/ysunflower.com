@@ -16,7 +16,7 @@ export default function SunflowerAnimation() {
         renderer: "svg",
         loop: true,
         autoplay: true,
-        path: "/animations/sunflower.json",
+        path: "/sunflower.json",
         rendererSettings: {
           preserveAspectRatio: "xMidYMid meet",
           progressiveLoad: true,

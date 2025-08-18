@@ -4,7 +4,7 @@ import "../styles/header.css";
 
 const Header: React.FC = () => {
   return (
-    <header id="header">
+    <div id="header">
       <div className="container header-content">
         <nav>
           <ul id="navMenu">
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
           </ul>
         </nav>
       </div>
-    </header>
+    </div>
   );
 };
 

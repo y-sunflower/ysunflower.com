@@ -87,6 +87,36 @@ body {
   z-index: 0;
 }
 
+.opensource-text h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.opensource-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  padding: 1.2rem 0;
+}
+
+.grid-section-name {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: var(--primary-font) !important;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
 @media (max-width: 480px) {
   .section-title h2 {
     font-size: 2rem;

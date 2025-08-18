@@ -14,13 +14,11 @@ const Footer: React.FC = () => {
             <h3>
               <span className="highlight-secondary">
                 <span className="name">yellow sunflower</span>
-              </span>
+              </span>{" "}
               🌻
             </h3>
             <p>Open tools for expressive data</p>
-            <Link href="https://github.com/y-sunflower" target="_blank">
-              <i className="fa fa-github" style={{ fontSize: "36px" }}></i>
-            </Link>
+            <Link href="https://github.com/y-sunflower" target="_blank"></Link>
           </div>
           <div className="footer-col">
             <h3>Open source</h3>
