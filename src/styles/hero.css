@@ -1,0 +1,69 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  width: 95%;
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(5px); /* For Safari support */
+  padding: 1rem;
+}
+
+.hero h1 {
+  font-family: var(--secondary-font);
+  font-size: 6rem;
+  color: var(--text-color);
+  text-align: center;
+  margin: 0.3rem 0;
+  text-transform: uppercase;
+  word-spacing: 0.8rem;
+}
+
+.hero p {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: var(--text-color);
+  text-align: center;
+  font-weight: 200;
+}
+
+.word-wrapper {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: width 0.8s ease-in-out;
+  vertical-align: bottom;
+}
+
+.changing-word {
+  display: inline-block;
+  white-space: nowrap;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+@media (max-width: 800px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .hero {
+    height: 70vh;
+    margin-top: 5rem;
+  }
+  .hero-content {
+    width: 95%;
+  }
+}

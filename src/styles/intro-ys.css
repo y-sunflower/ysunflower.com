@@ -1,0 +1,57 @@
+.intro-ys {
+  padding-top: 6rem;
+  background-color: var(--light);
+}
+
+.intro-ys-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.intro-ys-animation {
+  flex: 1;
+  position: relative;
+}
+
+.intro-ys-animation img {
+  width: 80%;
+  animation: spin 80s linear infinite;
+}
+
+.intro-ys-text {
+  flex: 1;
+}
+
+.intro-ys-text h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.intro-ys-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+@media (max-width: 480px) {
+  .intro-ys-animation {
+    display: none;
+  }
+
+  .intro-ys-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .intro-ys-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .intro-ys-text p {
+    font-size: 1rem;
+  }
+}
