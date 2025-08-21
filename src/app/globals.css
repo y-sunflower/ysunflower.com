@@ -48,6 +48,10 @@ body {
   font-family: var(--secondary-font);
 }
 
+.bottom-line {
+  border-bottom: 6px solid var(--primary-color);
+}
+
 .section-title {
   text-align: center;
   margin-bottom: 3rem;

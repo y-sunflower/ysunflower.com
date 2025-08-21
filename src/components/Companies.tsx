@@ -7,11 +7,12 @@ export default function Companies() {
       maxWidth: 100,
     },
     {
-      href: "https://kantiles.com/",
-      src: "/logos/kantiles.png",
-      alt: "Kantiles logo",
-      maxWidth: 140,
+      href: "https://www.aicrowd.com/",
+      src: "/logos/aicrowd.svg",
+      alt: "AIcrowd logo",
+      maxWidth: 220,
     },
+
     {
       href: "https://www.omni.org/",
       src: "/logos/omni.png",
@@ -31,10 +32,10 @@ export default function Companies() {
       maxWidth: 140,
     },
     {
-      href: "https://www.aicrowd.com/",
-      src: "/logos/aicrowd.svg",
-      alt: "AIcrowd logo",
-      maxWidth: 220,
+      href: "https://kantiles.com/",
+      src: "/logos/kantiles.png",
+      alt: "Kantiles logo",
+      maxWidth: 140,
     },
     {
       href: "https://www.westvalley.edu/",
