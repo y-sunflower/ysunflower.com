@@ -1,13 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import "particles.js";
-
-declare global {
-  interface Window {
-    particlesJS: any;
-  }
-}
 
 export default function ParticlesBackground() {
   useEffect(() => {

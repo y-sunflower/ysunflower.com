@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
           <div className="footer-col">
             <h3>Open source</h3>
             <Link
-              href="https://github.com/JosephBARBIERDARNAL/pypalettes"
+              href="https://github.com/y-sunflower/pypalettes"
               target="_blank"
             >
               pypalettes
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
               pyfonts
             </Link>
             <Link
-              href="https://github.com/JosephBARBIERDARNAL/drawarrow"
+              href="https://github.com/y-sunflower/drawarrow"
               target="_blank"
             >
               drawarrow
