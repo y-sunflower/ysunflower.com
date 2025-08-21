@@ -17,6 +17,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({
   packageTags,
 }) => {
   const [starCount, setStarCount] = useState<number | null>(null);
+  const [downloadCount, setDownloadCount] = useState<string | null>(null);
 
   const githubUrl = `https://github.com/y-sunflower/${packageName}`;
   const documentationUrl = `https://y-sunflower.github.io/${packageName}/`;
@@ -42,6 +43,31 @@ export const PackageCard: React.FC<PackageCardProps> = ({
     }
 
     fetchGitHubStars();
+  }, [packageName]);
+
+  useEffect(() => {
+    async function fetchDownloadCount() {
+      try {
+        const svgUrl = `https://static.pepy.tech/badge/${packageName}`;
+        const res = await fetch(svgUrl);
+        if (!res.ok)
+          throw new Error(`Failed to fetch PyPI badge: ${res.status}`);
+
+        const svgString = await res.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(svgString, "image/svg+xml");
+        const textNodes = Array.from(doc.getElementsByTagName("text"));
+        const values = textNodes
+          .map((el) => el.textContent?.trim())
+          .filter((t) => t && t.toLowerCase() !== "downloads");
+
+        if (values.length) setDownloadCount(values[0]!);
+      } catch (err) {
+        console.error("Error fetching PyPI downloads:", err);
+        setDownloadCount(null);
+      }
+    }
+    fetchDownloadCount();
   }, [packageName]);
 
   return (
@@ -77,7 +103,9 @@ export const PackageCard: React.FC<PackageCardProps> = ({
                 height="22"
                 width="22"
               />
-              <span className="download-count">...</span>
+              <span className="download-count">
+                {downloadCount !== null ? downloadCount : "..."}
+              </span>
             </div>
           </div>
           <div className="package-tags">
