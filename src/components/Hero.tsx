@@ -86,10 +86,10 @@ export default function Hero() {
         </p>
       </div>
       <ParticlesBackground
-        particleColor="#FFC30080" // Yellow particles
+        particleColor="#FFC30040" // Yellow particles
         particleAmount={80} // Number of particles
         particleSize={30} // Size of particles
-        moveSpeed={0.7} // Movement speed
+        moveSpeed={0.4} // Movement speed
         connectParticles={true} // Whether to connect particles
         connectionColor="#FFC300" // Connection line color with transparency
         connectionDistance={200} // Maximum distance for connections
