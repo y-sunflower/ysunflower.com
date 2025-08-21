@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import "../styles/package-card.css";
@@ -14,10 +16,33 @@ export const PackageCard: React.FC<PackageCardProps> = ({
   packageDescription,
   packageTags,
 }) => {
+  const [starCount, setStarCount] = useState<number | null>(null);
+
   const githubUrl = `https://github.com/y-sunflower/${packageName}`;
   const documentationUrl = `https://y-sunflower.github.io/${packageName}/`;
   const logoUrl = `https://github.com/JosephBARBIERDARNAL/static/blob/main/python-libs/${packageName}/image.png?raw=true`;
   const altText = `${packageName} Python package official logo`;
+
+  useEffect(() => {
+    async function fetchGitHubStars() {
+      try {
+        const res = await fetch(
+          `/api/github-stars?user=y-sunflower&repo=${packageName}`
+        );
+        const data = await res.json();
+        if (data.stargazers_count !== undefined) {
+          setStarCount(data.stargazers_count);
+        } else {
+          setStarCount(null);
+        }
+      } catch (err) {
+        console.error("Error fetching GitHub stars:", err);
+        setStarCount(null);
+      }
+    }
+
+    fetchGitHubStars();
+  }, [packageName]);
 
   return (
     <>
@@ -41,7 +66,9 @@ export const PackageCard: React.FC<PackageCardProps> = ({
               <svg className="stat-icon" viewBox="0 0 16 16">
                 <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" />
               </svg>
-              <span className="star-count">...</span>
+              <span className="star-count">
+                {starCount !== null ? starCount : "..."}
+              </span>
             </div>
             <div className="stat" data-pypi={packageName}>
               <Image
