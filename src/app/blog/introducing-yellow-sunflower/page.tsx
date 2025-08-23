@@ -94,9 +94,4 @@ const BlogPost1Content = () => {
   );
 };
 
-export const BlogPost1 = {
-  ...blogPostData,
-  content: <BlogPost1Content />,
-};
-
 export default BlogPost1Content;

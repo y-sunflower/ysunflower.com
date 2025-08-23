@@ -1,5 +1,4 @@
 import Hero from "../components/Hero";
-import Image from "next/image";
 import SunflowerAnimation from "../components/SunflowerAnimations";
 import PushButton from "../components/Button";
 import { packageList } from "../lists/packages-list";

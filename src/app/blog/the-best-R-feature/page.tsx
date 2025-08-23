@@ -17,9 +17,4 @@ const BlogPost2Content = () => {
   );
 };
 
-export const BlogPost2 = {
-  ...blogPostData,
-  content: <BlogPost2Content />,
-};
-
 export default BlogPost2Content;

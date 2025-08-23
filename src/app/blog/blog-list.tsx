@@ -1,5 +1,8 @@
-import { BlogPost2 } from "./the-best-R-feature/page";
-import { BlogPost1 } from "./introducing-yellow-sunflower/page";
+import { blogPostData as blogPostData1 } from "./introducing-yellow-sunflower/data";
+import BlogPost1Content from "./introducing-yellow-sunflower/page";
+
+import { blogPostData as blogPostData2 } from "./the-best-R-feature/data";
+import BlogPost2Content from "./the-best-R-feature/page";
 
 export type BlogPost = {
   slug: string;
@@ -11,4 +14,7 @@ export type BlogPost = {
   content: React.JSX.Element;
 };
 
-export const blogPosts: BlogPost[] = [BlogPost2, BlogPost1];
+export const blogPosts: BlogPost[] = [
+  { ...blogPostData1, content: <BlogPost1Content /> },
+  { ...blogPostData2, content: <BlogPost2Content /> },
+];
