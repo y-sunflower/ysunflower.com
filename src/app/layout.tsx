@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "yellow sunflower",
   description:
     "Open source tools for data science, data visualization and storytelling",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

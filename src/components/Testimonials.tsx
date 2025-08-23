@@ -39,16 +39,13 @@ export default function Testimonials() {
   return (
     <div className="testimonials">
       {testimonials.map((t, idx) => (
-        <div
-          key={idx}
-          className={`testimonial ${idx % 2 === 0 ? "left" : "right"}`}
-        >
+        <div key={idx} className={"testimonial"}>
           <a href={t.link} target="_blank" rel="noopener noreferrer">
             <Image
               src={t.img}
               alt={t.name}
-              width={100}
-              height={100}
+              width={120}
+              height={120}
               className="testimonial-img"
             />
           </a>

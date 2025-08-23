@@ -21,21 +21,14 @@
 
 .testimonial {
   display: flex;
-  align-items: flex-start;
+  align-items: center; /* vertical centering */
+  justify-content: center; /* horizontal centering */
   gap: 1.5rem;
   border: 1px solid #e0e0e0;
   padding: 1rem;
   border-radius: 8px;
   background-color: #fafafa;
   transition: all 0.3s ease;
-}
-
-.testimonial.left {
-  flex-direction: row;
-}
-
-.testimonial.right {
-  flex-direction: row-reverse;
 }
 
 .testimonial-img {
@@ -47,6 +40,7 @@
 
 .testimonial-content {
   flex: 1;
+  max-width: 80%;
 }
 
 .testimonial-name {
@@ -62,7 +56,7 @@
 }
 
 .testimonial-content p {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   padding: 10px 0;
 }
 

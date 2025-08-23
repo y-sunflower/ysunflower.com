@@ -121,13 +121,17 @@ body {
   margin-bottom: 3rem;
 }
 
-a:not(#header a):not(footer a):not(.logo-grid a):not(.packages-grid a) {
+a:not(#header a):not(footer a):not(.logo-grid a):not(.packages-grid a):not(
+    .cool-button
+  ) {
   position: relative;
   text-decoration: none;
   color: var(--secondary-color);
 }
 
-a:not(#header a):not(footer a):not(.logo-grid a):not(.packages-grid a)::after {
+a:not(#header a):not(footer a):not(.logo-grid a):not(.packages-grid a):not(
+    .cool-button
+  )::after {
   content: "";
   position: absolute;
   left: 0;
@@ -139,10 +143,10 @@ a:not(#header a):not(footer a):not(.logo-grid a):not(.packages-grid a)::after {
   z-index: -1; /* goes behind text */
 }
 
-a:not(#header a):not(footer a):not(.logo-grid a):not(
-    .packages-grid a
+a:not(#header a):not(footer a):not(.logo-grid a):not(.packages-grid a):not(
+    .cool-button
   ):hover::after {
-  height: 80%; /* increased thickness */
+  height: 90%; /* increased thickness */
 }
 
 li:not(nav li) {
