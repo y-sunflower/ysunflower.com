@@ -15,6 +15,6 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
-  { ...blogPostData1, content: <BlogPost1Content /> },
   { ...blogPostData2, content: <BlogPost2Content /> },
+  { ...blogPostData1, content: <BlogPost1Content /> },
 ];
