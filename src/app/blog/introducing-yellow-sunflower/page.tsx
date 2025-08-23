@@ -45,9 +45,10 @@ const BlogPost1Content = () => {
 
       <h2>Open source & dataviz</h2>
       <p>
-        Most of my open source focuses on data visualization, and will mostly
-        remain so. The main reason for that is that I believe there are still{" "}
-        <b>a lot</b> of things to create, improve, and of course, maintain.
+        Most of my open source work focuses on data visualization, and will
+        mostly remain so. The main reason for that is that I believe there are
+        still <b>a lot</b> of things to create, improve, and of course,
+        maintain.
       </p>
       <p>
         There are numerous tools that still don&apos;t exist that I believe
