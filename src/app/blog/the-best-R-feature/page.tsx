@@ -1,13 +1,5 @@
 import "../../../styles/blog.css";
-
-export const blogPostData = {
-  slug: "the-best-R-feature",
-  title: "The best R feature",
-  description: "The most underrated R feature that should know (and use!)",
-  image: "/blog/the-best-R-feature.png",
-  readingTime: "3 min",
-  date: "Sep 2025",
-};
+import { blogPostData } from "./data";
 
 const BlogPost2Content = () => {
   return (
@@ -16,10 +8,11 @@ const BlogPost2Content = () => {
       style={{ marginTop: "10rem" }}
     >
       <h1>{blogPostData.title}</h1>
-      <p className="blog-description blog-header">{blogPostData.description}</p>
-
-      <h2>title</h2>
-      <p>Hell</p>
+      <div className="blog-post-header">
+        <p>{blogPostData.date}</p>
+        <p>{blogPostData.readingTime}</p>
+      </div>
+      <p className="blog-description">{blogPostData.description}</p>
     </div>
   );
 };
