@@ -6,6 +6,7 @@ export const blogPostData = {
   description: "The most underrated R feature that should know (and use!)",
   image: "/blog/the-best-R-feature.png",
   readingTime: "3 min",
+  date: "Sep 2025",
 };
 
 const BlogPost2Content = () => {
