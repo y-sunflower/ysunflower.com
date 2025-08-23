@@ -7,7 +7,6 @@ export type BlogPost = {
   description: string;
   image: string;
   readingTime: string;
-  body: string;
   content: React.JSX.Element;
 };
 

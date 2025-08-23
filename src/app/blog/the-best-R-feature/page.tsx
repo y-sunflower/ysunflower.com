@@ -6,7 +6,6 @@ export const blogPostData = {
   description: "The most underrated R feature that should know (and use!)",
   image: "/blog/the-best-R-feature.png",
   readingTime: "3 min",
-  body: "R reads functions differently than many programming languages. It uses lazy-evaluation, which allows writing nice code patterns.",
 };
 
 const BlogPost2Content = () => {
@@ -16,7 +15,7 @@ const BlogPost2Content = () => {
       style={{ marginTop: "10rem" }}
     >
       <h1>{blogPostData.title}</h1>
-      <p className="blog-description blog-header">{blogPostData.body}</p>
+      <p className="blog-description blog-header">{blogPostData.description}</p>
 
       <h2>title</h2>
       <p>Hell</p>

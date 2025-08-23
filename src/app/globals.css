@@ -155,6 +155,37 @@ li:not(nav li) {
   list-style-type: circle;
 }
 
+img.rotate {
+  animation: windySpin 30s ease-in-out infinite;
+}
+
+@keyframes windySpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(60deg);
+  }
+  55% {
+    transform: rotate(20deg);
+  }
+  70% {
+    transform: rotate(80deg);
+  }
+  85% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(120deg);
+  }
+}
+
 @media (max-width: 480px) {
   .section-title h2 {
     font-size: 2rem;
