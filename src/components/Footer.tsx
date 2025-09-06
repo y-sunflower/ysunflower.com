@@ -1,4 +1,5 @@
 import React from "react";
+import SunflowerAnimation from "../components/SunflowerAnimations";
 import Link from "next/link";
 import "../styles/footer.css";
 
@@ -50,11 +51,12 @@ const Footer: React.FC = () => {
             </Link>
           </div>
           <div className="footer-col">
-            <h3>Services</h3>
-            <Link href="#">Data Visualization</Link>
-            <Link href="#">Reproducible analysis</Link>
-            <Link href="#">Package development</Link>
-            <Link href="#">Training</Link>
+            <h3>Socials</h3>
+            <Link href="https://github.com/y-sunflower">Github</Link>
+            <Link href="https://www.linkedin.com/company/yellow-sunflower/">
+              LinkedIn
+            </Link>
+            <Link href="https://www.youtube.com/@ye-sunflower">Youtube</Link>
           </div>
           <div className="footer-col">
             <h3>Contact</h3>
