@@ -1,5 +1,4 @@
 import React from "react";
-import SunflowerAnimation from "../components/SunflowerAnimations";
 import Link from "next/link";
 import "../styles/footer.css";
 
