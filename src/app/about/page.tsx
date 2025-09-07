@@ -64,7 +64,10 @@ export default function Home() {
         <Companies />
       </section>
 
-      <div className="container" style={{ marginTop: "10rem" }}>
+      <div
+        className="container"
+        style={{ marginTop: "10rem", maxWidth: "1000px" }}
+      >
         <div className="about-text">
           <h2>
             <span style={{ display: "inline-block" }} className="bottom-line">
@@ -75,9 +78,7 @@ export default function Home() {
             </span>
           </h2>
         </div>
-      </div>
 
-      <div className="container">
         <Testimonials />
       </div>
     </>

@@ -45,9 +45,6 @@ const Footer: React.FC = () => {
             <Link href="https://github.com/y-sunflower/dayplot" target="_blank">
               dayplot
             </Link>
-            <Link href="https://github.com/y-sunflower/gifing" target="_blank">
-              gifing
-            </Link>
           </div>
           <div className="footer-col">
             <h3>Socials</h3>

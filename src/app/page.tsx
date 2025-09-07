@@ -1,4 +1,5 @@
 import Hero from "../components/Hero";
+import Link from "next/link";
 import SunflowerAnimation from "../components/SunflowerAnimations";
 import PushButton from "../components/Button";
 import { packageList } from "../lists/packages-list";
@@ -40,7 +41,11 @@ export default function Home() {
               </p>
               <p>
                 We offer <span style={{ fontWeight: "600" }}>open source</span>{" "}
-                tools, with a focus on data visualization.
+                tools, with a focus on data visualization. To find out more,
+                read the{" "}
+                <Link href="/blog/introducing-yellow-sunflower">
+                  announcement&apos;s blog post
+                </Link>
               </p>
               <PushButton
                 text={"Get started"}
