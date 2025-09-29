@@ -143,12 +143,6 @@ a:not(#header a):not(footer a):not(.logo-grid a):not(.packages-grid a):not(
   z-index: -1; /* goes behind text */
 }
 
-a:not(#header a):not(footer a):not(.logo-grid a):not(.packages-grid a):not(
-    .cool-button
-  ):not(div.blog-list a):hover::after {
-  height: 90%; /* increased thickness */
-}
-
 li:not(nav li) {
   font-size: 1.3rem;
   padding: 0.5rem 0;
@@ -182,7 +176,7 @@ img.rotate {
     transform: rotate(50deg);
   }
   100% {
-    transform: rotate(120deg);
+    transform: rotate(130deg);
   }
 }
 

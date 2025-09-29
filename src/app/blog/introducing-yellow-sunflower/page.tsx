@@ -86,7 +86,7 @@ const BlogPost1Content = () => {
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <img
-          src="/logo.svg"
+          src="/logo.png"
           style={{ maxWidth: "20%", height: "auto" }}
           className="rotate"
         />

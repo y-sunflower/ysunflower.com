@@ -109,7 +109,7 @@ export default function Home() {
             gap: "1.5rem",
           }}
         >
-          <img src="/logo.svg" style={{ maxWidth: "20%", height: "auto" }} />
+          <img src="/logo.png" style={{ maxWidth: "20%", height: "auto" }} />
           <span
             style={{
               borderBottom: "10px solid #ffc300",
@@ -133,7 +133,7 @@ export default function Home() {
           }}
         >
           <img
-            src="/logo.svg"
+            src="/logo.png"
             style={{
               filter: "grayscale(100%)",
               maxWidth: "20%",
@@ -164,7 +164,7 @@ export default function Home() {
           }}
         >
           <img
-            src="/logo.svg"
+            src="/logo.png"
             style={{ maxWidth: "20%", height: "auto" }}
             className="rotate"
           />
@@ -191,7 +191,7 @@ export default function Home() {
           }}
         >
           <img
-            src="/logo.svg"
+            src="/logo.png"
             style={{
               filter: "grayscale(100%)",
               maxWidth: "20%",
@@ -214,11 +214,11 @@ export default function Home() {
           </span>
         </div>
         <hr />
-        <img src="/logo.svg" />
+        <img src="/logo.png" />
         <hr />
-        <img src="/logo.svg" style={{ filter: "grayscale(100%)" }} />
+        <img src="/logo.png" style={{ filter: "grayscale(100%)" }} />
         <hr />
-        <img src="/logo.svg" />
+        <img src="/logo.png" />
         <span
           style={{
             display: "inline-block",
@@ -231,7 +231,7 @@ export default function Home() {
           </span>
         </span>
         <hr />
-        <img src="/logo.svg" style={{ filter: "grayscale(100%)" }} />
+        <img src="/logo.png" style={{ filter: "grayscale(100%)" }} />
         <span
           style={{
             display: "inline-block",

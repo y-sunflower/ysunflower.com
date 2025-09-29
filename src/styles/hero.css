@@ -46,6 +46,7 @@
   display: inline-block;
   white-space: nowrap;
   transition: opacity 0.8s ease-in-out;
+  font-weight: 400;
 }
 
 .fade-out {

@@ -20,6 +20,9 @@ const Header: React.FC = () => {
               <Link href="/#opensource">open source</Link>
             </li>
             <li>
+              <Link href="/#consulting">consulting</Link>
+            </li>
+            <li>
               <Link href="/blog">blog</Link>
             </li>
             <li>

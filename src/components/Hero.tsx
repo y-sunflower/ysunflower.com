@@ -70,24 +70,16 @@ export default function Hero() {
           <span className="highlight-secondary">data</span>
         </h1>
         <p>
-          Cultivating data, one{" "}
+          Consulting and open source for the{" "}
           <WordChanger
-            words={[
-              "graphic",
-              "story",
-              "project",
-              "discussion",
-              "commit",
-              "idea",
-              "metric",
-            ]}
+            words={["data", "research", "analytics", "engineering"]}
           />{" "}
-          at a time
+          world
         </p>
       </div>
       <ParticlesBackground
         particleColor="#FFC30040" // Yellow particles
-        particleAmount={80} // Number of particles
+        particleAmount={40} // Number of particles
         particleSize={30} // Size of particles
         moveSpeed={0.4} // Movement speed
         connectParticles={true} // Whether to connect particles

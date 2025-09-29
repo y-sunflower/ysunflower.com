@@ -12,9 +12,7 @@ const Footer: React.FC = () => {
         <div className="footer-content">
           <div className="footer-col">
             <h3>
-              <span className="highlight-secondary">
-                <span className="name">yellow sunflower</span>
-              </span>
+              <span className="name">yellow sunflower</span>
             </h3>
             <p>Open tools for expressive data</p>
             <Link href="https://github.com/y-sunflower" target="_blank"></Link>
