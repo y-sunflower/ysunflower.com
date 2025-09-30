@@ -74,7 +74,12 @@ export default function Companies() {
             rel="noopener noreferrer"
             style={{ maxWidth: company.maxWidth }}
           >
-            <img src={company.src} alt={company.alt} width={company.maxWidth} />
+            <img
+              src={company.src}
+              alt={company.alt}
+              width={company.maxWidth}
+              className="company-logo"
+            />
           </a>
         ))}
       </div>

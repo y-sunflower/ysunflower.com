@@ -43,6 +43,9 @@ const Footer: React.FC = () => {
             <Link href="https://github.com/y-sunflower/dayplot" target="_blank">
               dayplot
             </Link>
+            <Link href="https://github.com/y-sunflower/bumplot" target="_blank">
+              bumplot
+            </Link>
           </div>
           <div className="footer-col">
             <h3>Socials</h3>
@@ -50,12 +53,14 @@ const Footer: React.FC = () => {
             <Link href="https://www.linkedin.com/company/yellow-sunflower/">
               LinkedIn
             </Link>
-            <Link href="https://www.youtube.com/@ye-sunflower">Youtube</Link>
           </div>
           <div className="footer-col">
             <h3>Contact</h3>
             <p>joseph.barbierdarnal@gmail.com</p>
             <p>Made in France</p>
+            <p>
+              <Link href="/about">About</Link>
+            </p>
           </div>
         </div>
         <div className="copyright">

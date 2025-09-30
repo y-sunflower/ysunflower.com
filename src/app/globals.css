@@ -153,6 +153,39 @@ img.rotate {
   animation: windySpin 30s ease-in-out infinite;
 }
 
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.logo-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+img.company-logo {
+  filter: grayscale(0);
+  transition: all 0.3s;
+}
+
+img.company-logo:hover {
+  filter: grayscale(1);
+  rotate: 2deg;
+}
+
+p.caption {
+  font-style: oblique;
+  font-weight: 300;
+  font-size: 1.2em;
+  color: rgba(110, 110, 110, 1);
+  display: flex;
+  justify-content: center;
+}
+
 @keyframes windySpin {
   0% {
     transform: rotate(0deg);

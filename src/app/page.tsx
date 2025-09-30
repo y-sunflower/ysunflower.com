@@ -1,4 +1,5 @@
 import Hero from "../components/Hero";
+import Companies from "../components/Companies";
 import Link from "next/link";
 import SunflowerAnimation from "../components/SunflowerAnimations";
 import PushButton from "../components/Button";
@@ -122,6 +123,10 @@ export default function Home() {
               </span>{" "}
               to make your data work for you.
             </p>
+            <div style={{ margin: "2em 1em" }}>
+              <Companies />
+              <p className="caption">Overview of previous clients</p>
+            </div>
             <p>
               Whether you need dashboards for decision-making, automated
               reporting, or guidance on modern data workflows, we can support
