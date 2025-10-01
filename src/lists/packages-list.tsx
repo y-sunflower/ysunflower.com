@@ -36,9 +36,4 @@ export const packageList: PackageProps[] = [
     packageDescription: "Easily create and customize bump charts in Python",
     packageTags: ["matplotlib", "bump", "curve"],
   },
-  {
-    packageName: "gifing",
-    packageDescription: "A lightweight python tool for creating GIFs ",
-    packageTags: ["GIF", "image"],
-  },
 ];

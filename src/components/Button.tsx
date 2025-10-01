@@ -5,19 +5,24 @@ import "../styles/button.css";
 type PushButtonProps = {
   text: string;
   link: string;
+  fontSize?: string;
 };
 
-export const PushButton: React.FC<PushButtonProps> = ({ text, link }) => {
+export const PushButton: React.FC<PushButtonProps> = ({
+  text,
+  link,
+  fontSize = "auto",
+}) => {
   return (
-    <>
-      <Link href={link} style={{ textDecoration: "none" }}>
-        <p className="cool-button cool-button-tricks">
-          <b className="highlight-secondary" style={{ fontSize: "1.2em" }}>
-            {text}
-          </b>
-        </p>
+    <p className="cool-button cool-button-tricks">
+      <Link
+        href={link}
+        className="highlight-secondary push-button-link"
+        style={{ textDecoration: "none", fontSize }}
+      >
+        {text}
       </Link>
-    </>
+    </p>
   );
 };
 

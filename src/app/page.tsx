@@ -1,7 +1,7 @@
 import Hero from "../components/Hero";
+import { ContactForm } from "../components/Form";
 import Companies from "../components/Companies";
 import Link from "next/link";
-import SunflowerAnimation from "../components/SunflowerAnimations";
 import PushButton from "../components/Button";
 import { packageList } from "../lists/packages-list";
 import PackageCard from "../components/PackageCard";
@@ -13,11 +13,23 @@ export default function Home() {
       <section
         className="intro-ys"
         id="intro-ys"
-        style={{ marginBottom: "10rem" }}
+        style={{ marginBottom: "15em" }}
       >
         <div className="container">
           <div className="intro-ys-content">
-            <SunflowerAnimation />
+            <div
+              style={{
+                width: "25%",
+                justifyContent: "center",
+                display: "flex",
+              }}
+            >
+              <img
+                src="/logo.png"
+                style={{ maxWidth: "100%", height: "auto" }}
+                className="rotate landing-logo"
+              />
+            </div>
             <div className="intro-ys-text" style={{ textAlign: "right" }}>
               <h2>
                 <span
@@ -35,23 +47,32 @@ export default function Home() {
                   <span className="highlight">yellow</span>{" "}
                   <span className="highlight-secondary">sunflower</span>
                 </span>{" "}
-                offers <span style={{ fontWeight: "600" }}>open source</span>{" "}
-                tools and{" "}
-                <span style={{ fontWeight: "600" }}>consulting services</span>,
-                with a focus on data visualization.
-              </p>
-              <p>
-                To find out more, read the{" "}
+                is an <span style={{ fontWeight: "600" }}>open source</span> and{" "}
+                <span style={{ fontWeight: "600" }}>consulting</span> company,
+                that focuses on data visualization. To find out more, read the{" "}
                 <Link href="/blog/introducing-yellow-sunflower">
                   announcement&apos;s blog post
                 </Link>
                 .
               </p>
-              <PushButton
-                text={"open source"}
-                link={"https://github.com/y-sunflower"}
-              />
-              <PushButton text={"consulting"} link={"/#consulting"} />
+              <div
+                style={{
+                  display: "flex",
+                  gap: "1rem",
+                  justifyContent: "flex-end",
+                }}
+              >
+                <PushButton
+                  text={"open source"}
+                  link={"https://github.com/y-sunflower"}
+                  fontSize="1em"
+                />
+                <PushButton
+                  text={"consulting"}
+                  link={"/#contact"}
+                  fontSize="1em"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -125,7 +146,6 @@ export default function Home() {
             </p>
             <div style={{ margin: "2em 1em" }}>
               <Companies />
-              <p className="caption">Overview of previous clients</p>
             </div>
             <p>
               Whether you need dashboards for decision-making, automated
@@ -136,16 +156,44 @@ export default function Home() {
               </span>
               .{" "}
             </p>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                fontSize: "1.4em",
-              }}
-            >
-              <Link href="mailto:joseph.barbierdarnal@gmail.com">
-                Get in touch
-              </Link>
+          </div>
+          <div className="button-variant">
+            <PushButton
+              text={"Work With Us"}
+              link={"/#contact"}
+              fontSize="1.2em"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div id="contact" style={{ marginBottom: "15rem" }}></div>
+
+      <section>
+        <div className="container">
+          <div className="opensource-text get-in-touch-content">
+            <div className="text-section">
+              <h2>
+                <span className="bottom-line">
+                  <span className="name">
+                    <span className="highlight">Get In</span>{" "}
+                    <span className="highlight-secondary">Touch</span>
+                  </span>
+                </span>
+              </h2>
+              <p className="intro-text">
+                I’d love to hear from you! Whether you have a question, want to
+                collaborate, or just want to say hi, feel free to drop a message
+                below.
+              </p>
+              <p>
+                <a href="mailto:joseph.barbierdarnal@gmail.com">
+                  joseph.barbierdarnal@gmail.com
+                </a>
+              </p>
+            </div>
+            <div className="form-section">
+              <ContactForm />
             </div>
           </div>
         </div>

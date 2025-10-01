@@ -15,7 +15,6 @@ const Footer: React.FC = () => {
               <span className="name">yellow sunflower</span>
             </h3>
             <p>Open tools for expressive data</p>
-            <Link href="https://github.com/y-sunflower" target="_blank"></Link>
           </div>
           <div className="footer-col">
             <h3>Open source</h3>
@@ -53,14 +52,12 @@ const Footer: React.FC = () => {
             <Link href="https://www.linkedin.com/company/yellow-sunflower/">
               LinkedIn
             </Link>
+            <Link href="/about">About</Link>
           </div>
           <div className="footer-col">
             <h3>Contact</h3>
             <p>joseph.barbierdarnal@gmail.com</p>
             <p>Made in France</p>
-            <p>
-              <Link href="/about">About</Link>
-            </p>
           </div>
         </div>
         <div className="copyright">

@@ -186,6 +186,58 @@ p.caption {
   justify-content: center;
 }
 
+.intro-ys {
+  margin-top: 10em;
+  background-color: var(--light);
+}
+
+.intro-ys-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.intro-ys-text h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.intro-ys-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+.get-in-touch-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.text-section {
+  flex: 1 1 350px;
+}
+
+.text-section h2 {
+  margin-bottom: 1.2em;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+.form-section {
+  flex: 1 1 400px;
+}
+
 @keyframes windySpin {
   0% {
     transform: rotate(0deg);
@@ -238,5 +290,13 @@ p.caption {
 
   .intro-ys-text p {
     font-size: 1rem;
+  }
+
+  .get-in-touch-content p {
+    font-size: 1.2em;
+  }
+
+  .landing-logo {
+    display: none;
   }
 }

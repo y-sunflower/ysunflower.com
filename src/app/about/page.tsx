@@ -1,5 +1,6 @@
 import Companies from "../../components/Companies";
 import Testimonials from "../../components/Testimonials";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -39,17 +40,18 @@ export default function Home() {
                 .
               </p>
               <p>
-                My primary focus is to increase the weight people give to design
-                and storytelling in data science, and helping them to do so.
+                My primary focus here is to increase the weight people give to
+                design and storytelling in data science, and helping them to do
+                so.
+              </p>
+              <p>
                 There already are{" "}
                 <a href="https://github.com/y-sunflower" target="_blank">
                   multiple projects
                 </a>{" "}
-                that you can benefit from.
-              </p>
-              <p>
-                If you&apos;re interested in my consulting services, just send
-                an email at <code>joseph.barbierdarnal@gmail.com</code>
+                that you can benefit from and if you&apos;re interested in my
+                consulting services, just{" "}
+                <Link href="/#contact">send an email</Link>.
               </p>
               <p>
                 You can find a list of all the organisations I have worked with

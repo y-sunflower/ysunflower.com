@@ -234,4 +234,21 @@
   .package-card {
     padding: 1rem;
   }
+
+  .package-image img {
+    width: 85%;
+    height: 85%;
+  }
+
+  .package-header {
+    margin-bottom: 0.5rem;
+  }
+
+  .link-btn {
+    padding: 0.5rem 0.6rem;
+  }
+
+  a.link-btn {
+    font-size: 0.8em;
+  }
 }

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import ParticlesBackground from "./Particles";
+import PushButton from "./Button";
 import "../styles/hero.css";
 
 interface WordChangerProps {
@@ -65,10 +66,6 @@ export default function Hero() {
   return (
     <section className="hero" id="home">
       <div className="container hero-content">
-        <h1>
-          <span className="highlight">Open</span> tools for expressive{" "}
-          <span className="highlight-secondary">data</span>
-        </h1>
         <p>
           Consulting and open source for the{" "}
           <WordChanger
@@ -76,12 +73,23 @@ export default function Hero() {
           />{" "}
           world
         </p>
+        <h1>
+          <span className="highlight">Open</span> tools for expressive{" "}
+          <span className="highlight-secondary">data</span>
+        </h1>
+        <div className="button-variant">
+          <PushButton
+            text={"Work With Us"}
+            link={"/#contact"}
+            fontSize="0.9em"
+          />
+        </div>
       </div>
       <ParticlesBackground
         particleColor="#FFC30040" // Yellow particles
         particleAmount={40} // Number of particles
         particleSize={30} // Size of particles
-        moveSpeed={0.4} // Movement speed
+        moveSpeed={0.3} // Movement speed
         connectParticles={true} // Whether to connect particles
         connectionColor="#FFC300" // Connection line color with transparency
         connectionDistance={200} // Maximum distance for connections
