@@ -10,9 +10,11 @@ const Footer: React.FC = () => {
         <br />
         <br />
         <div className="footer-content">
-          <div className="footer-col">
+          <div className="footer-col" style={{ marginRight: "3em" }}>
             <h3>
-              <span className="name">yellow sunflower</span>
+              <span className="name" style={{ color: "black" }}>
+                yellow sunflower
+              </span>
             </h3>
             <p>Open tools for expressive data</p>
           </div>

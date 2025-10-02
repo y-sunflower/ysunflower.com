@@ -19,7 +19,7 @@ const Header: React.FC = () => {
     <div id="header">
       <div className="container header-content">
         <Link href="/#" onClick={closeMenu}>
-          <span className="name">
+          <span className="name" style={{ fontSize: "1.5em" }}>
             <span className="highlight">yellow</span>{" "}
             <span className="highlight-secondary">sunflower</span>
           </span>
