@@ -179,8 +179,7 @@ p.caption {
   font-weight: 300;
   font-size: 1.2em;
   color: rgba(110, 110, 110, 1);
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .intro-ys {

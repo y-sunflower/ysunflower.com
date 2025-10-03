@@ -71,8 +71,8 @@ const BlogPost1Content = () => {
         more reproducible, and visually clean, from analysis to reports.
       </p>
       <p>
-        If this kind of service is interesting to you, please feel free to
-        contact me.
+        If this kind of service is interesting to you, please feel free to{" "}
+        <Link href="/#contact">contact me</Link>.
       </p>
       <br />
       <br />

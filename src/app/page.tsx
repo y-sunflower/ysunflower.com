@@ -111,6 +111,15 @@ export default function Home() {
               )
             )}
           </div>
+          <p className="caption">
+            Want to contribute? <b>Great!</b> It&apos;s all happening on{" "}
+            <Link href="https://github.com/y-sunflower">Github</Link>.
+          </p>
+          <br />
+          <p className="caption">
+            Need help getting started? <b>No problem</b>, just open an issue
+            with your questions!
+          </p>
         </div>
       </section>
 
