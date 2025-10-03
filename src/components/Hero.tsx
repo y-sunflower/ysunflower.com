@@ -67,11 +67,11 @@ export default function Hero() {
     <section className="hero" id="home">
       <div className="container hero-content">
         <p>
-          Consulting and open source for the{" "}
+          We build open-source tools and help teams{" "}
           <WordChanger
-            words={["data", "research", "analytics", "engineering"]}
+            words={["visualize", "communicate", "analyze", "understand"]}
           />{" "}
-          world
+          their data.
         </p>
         <h1>
           <span className="highlight">Open</span> tools for expressive{" "}
