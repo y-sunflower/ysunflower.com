@@ -77,7 +77,13 @@ export default function Hero() {
           <span className="highlight">Open</span> tools for expressive{" "}
           <span className="highlight-secondary">data</span>
         </h1>
-        <div className="button-variant">
+        <p className="hero-description">
+          Over the past years, we&apos;ve delivered{" "}
+          <b>dozens of successful projects</b>, reached{" "}
+          <b>hundreds of thousands of downloads</b> of our open-source software,
+          and <b>helped thousands of people</b> with their data work.
+        </p>
+        <div className="button-variant" style={{ marginTop: "3em" }}>
           <PushButton
             text={"Work With Us"}
             link={"/#contact"}

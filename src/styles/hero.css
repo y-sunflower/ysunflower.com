@@ -16,6 +16,17 @@
   padding: 1rem;
 }
 
+.hero p.hero-description {
+  font-size: 1.4em;
+  font-weight: 400;
+  font-style: italic;
+  width: 70%;
+  margin: 1em auto 0;
+}
+.hero p.hero-description > b {
+  font-weight: 600;
+}
+
 .hero h1 {
   font-family: var(--secondary-font);
   font-size: 6rem;

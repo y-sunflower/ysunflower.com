@@ -150,10 +150,6 @@ li:not(nav li) {
   list-style-type: circle;
 }
 
-img.rotate {
-  animation: windySpin 30s ease-in-out infinite;
-}
-
 .logo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -239,6 +235,10 @@ p.caption {
   flex: 1 1 400px;
 }
 
+img.rotate {
+  animation: windySpin 30s ease-in-out infinite;
+}
+
 @keyframes windySpin {
   0% {
     transform: rotate(0deg);
@@ -262,8 +262,8 @@ p.caption {
     transform: rotate(50deg);
   }
   100% {
-    transform: rotate(130deg);
-  }
+    transform: rotate(0deg);
+  } /* closes the loop */
 }
 
 @media (max-width: 480px) {
