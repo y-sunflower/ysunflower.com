@@ -37,7 +37,7 @@
   transition: width 0.5s ease;
 }
 
-.name:hover::after {
+header-content .name:hover::after {
   width: 100%;
 }
 
