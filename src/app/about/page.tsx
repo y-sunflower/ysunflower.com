@@ -9,7 +9,10 @@ export default function Home() {
         <div className="container" style={{ maxWidth: "1000px" }}>
           <div className="about-content">
             <div className="joseph-image">
-              <img src="/joseph.png" />
+              <img
+                src="/joseph.png"
+                alt="Image of Joseph Barbier, founder of yellow sunflower"
+              />
             </div>
             <div className="about-text">
               <h2 style={{ textAlign: "right" }}>
@@ -40,9 +43,8 @@ export default function Home() {
                 .
               </p>
               <p>
-                My primary focus here is to increase the weight people give to
-                design and storytelling in data science, and helping them to do
-                so.
+                My goal is to put humans at the center of data, helping teams
+                communicate, explore, and make sense of their data.
               </p>
               <p>
                 There already are{" "}
@@ -82,6 +84,41 @@ export default function Home() {
         </div>
 
         <Testimonials />
+      </div>
+
+      <div
+        className="container"
+        style={{ marginTop: "10rem", maxWidth: "1000px" }}
+      >
+        <div className="about-text about-tools">
+          <h2 style={{ textAlign: "right" }}>
+            <span style={{ display: "inline-block" }} className="bottom-line">
+              <span className="name">
+                <span className="highlight">about</span>{" "}
+                <span className="highlight-secondary">tools</span>
+              </span>
+            </span>
+          </h2>
+          <p>
+            <b>Data is not about tools</b>, nor should it be. However, choosing
+            the right tools has a significant impact on a project&apos;s
+            success. At <span className="highlight">yellow</span>{" "}
+            <span className="highlight-secondary">sunflower</span>, we primarily
+            believe in free and open-source software. For this reason, our tools
+            of choice are:
+          </p>
+          <ul>
+            <li>
+              <b>Python</b> & <b>R</b> for all essential data-related tasks
+            </li>
+            <li>
+              <b>HTML/CSS/JS</b> for web reports (often with Quarto)
+            </li>
+            <li>
+              <b>Typst</b> for PDF reports (often with Quarto)
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   );

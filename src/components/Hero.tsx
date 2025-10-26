@@ -67,39 +67,37 @@ export default function Hero() {
     <section className="hero" id="home">
       <div className="container hero-content">
         <p>
-          We build open-source tools and help teams{" "}
+          Open-source tools and consulting to help teams{" "}
           <WordChanger
-            words={["visualize", "communicate", "analyze", "understand"]}
+            words={["visualize", "communicate", "understand", "trust"]}
+            interval={2500}
+            fadeDuration={400}
           />{" "}
           their data.
         </p>
         <h1>
-          <span className="highlight">Open</span> tools for expressive{" "}
-          <span className="highlight-secondary">data</span>
+          <span className="highlight">Data</span> for{" "}
+          <span className="highlight-secondary">humans</span>
         </h1>
         <p className="hero-description">
-          Over the past years, we&apos;ve delivered{" "}
-          <b>dozens of successful projects</b>, reached{" "}
-          <b>hundreds of thousands of downloads</b> of our open-source software,
-          and <b>helped thousands of people</b> with their data work.
+          <b>Dozens</b> of successful projects, <b>hundreds of thousands</b>{" "}
+          downloads, and <b>thousands</b> of people helped. Because{" "}
+          <span className="highlight">data</span> <b>is for</b>{" "}
+          <span className="highlight-secondary">humans</span>.
         </p>
-        <div className="button-variant" style={{ marginTop: "3em" }}>
-          <PushButton
-            text={"Work With Us"}
-            link={"/#contact"}
-            fontSize="0.9em"
-          />
+        <div className="button-variant" style={{ marginTop: "2em" }}>
+          <PushButton text="Work With Us" link="/#contact" fontSize="0.9em" />
         </div>
       </div>
       <ParticlesBackground
-        particleColor="#FFC30040" // Yellow particles
-        particleAmount={40} // Number of particles
-        particleSize={30} // Size of particles
-        moveSpeed={0.3} // Movement speed
-        connectParticles={true} // Whether to connect particles
-        connectionColor="#FFC300" // Connection line color with transparency
-        connectionDistance={200} // Maximum distance for connections
-        background="transparent" // Background of the canvas
+        particleColor="#FFC30040"
+        particleAmount={40}
+        particleSize={30}
+        moveSpeed={0.3}
+        connectParticles
+        connectionColor="#FFC300"
+        connectionDistance={200}
+        background="transparent"
       />
     </section>
   );

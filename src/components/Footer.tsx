@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
                 yellow sunflower
               </span>
             </h3>
-            <p>Open tools for expressive data</p>
+            <p>Data for humans</p>
           </div>
           <div className="footer-col">
             <h3>Open source</h3>

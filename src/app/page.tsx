@@ -28,6 +28,7 @@ export default function Home() {
                 src="/logo.png"
                 style={{ maxWidth: "100%", height: "auto" }}
                 className="rotate landing-logo"
+                alt="logo of yellow sunflower, which is a yellow sunflower with a purple center"
               />
             </div>
             <div className="intro-ys-text" style={{ textAlign: "right" }}>
@@ -95,8 +96,8 @@ export default function Home() {
               Open source is at the core of{" "}
               <span className="highlight">yellow</span>{" "}
               <span className="highlight-secondary">sunflower</span>. All
-              projects are released under permissive licenses and designed to be
-              simple, useful, and easy to extend.
+              projects are released under permissive licenses and designed to be{" "}
+              <b>simple</b>, <b>useful</b>, and <b>easy to extend</b>.
             </p>
           </div>
           <div className="packages-grid">

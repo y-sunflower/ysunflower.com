@@ -82,6 +82,10 @@
   color: var(--text-color);
 }
 
+.about-tools p {
+  font-size: 1.4rem;
+}
+
 @media (max-width: 768px) {
   .testimonial {
     flex-direction: column;
