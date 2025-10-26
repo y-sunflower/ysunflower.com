@@ -13,6 +13,12 @@ const BlogPost2Content = () => {
         <p>{blogPostData.readingTime}</p>
       </div>
       <p className="blog-description">{blogPostData.description}</p>
+
+      {/* <h2>Tidy evaluation is sooo good!</h2> */}
+      <p style={{ fontSize: "3em" }}>
+        Oops! You&apos;re here a little early, this blog post is not available
+        yet. Try to come back later!
+      </p>
     </div>
   );
 };
