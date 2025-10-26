@@ -61,15 +61,15 @@ export default function Companies() {
       maxWidth: 180,
     },
     {
-      href: "https://www.inrae.fr/",
-      src: "/logos/inrae.webp",
-      alt: "INRAE logo",
-      maxWidth: 120,
-    },
-    {
       href: "https://www.jhu.edu/",
       src: "/logos/johns-hopkins-university.png",
       alt: "Johns Hopkins University logo",
+      maxWidth: 170,
+    },
+    {
+      href: "https://www.inrae.fr/",
+      src: "/logos/inrae.webp",
+      alt: "INRAE logo",
       maxWidth: 120,
     },
   ];

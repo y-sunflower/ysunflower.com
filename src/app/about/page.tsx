@@ -90,8 +90,64 @@ export default function Home() {
         className="container"
         style={{ marginTop: "10rem", maxWidth: "1000px" }}
       >
+        <div className="about-content">
+          <div className="image-computer">
+            <img
+              src="/computer.jpg"
+              alt="Image of Joseph Barbier, founder of yellow sunflower"
+            />
+            <div style={{ fontSize: "0.8em" }}>
+              <p className="caption">
+                My (small) office, always with a cup of coffee.
+              </p>
+              <p className="caption">
+                <b>Bordeaux, France.</b>
+              </p>
+            </div>
+          </div>
+          <div className="about-text">
+            <h2 style={{ textAlign: "right" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  borderBottom: "6px solid #ffc300",
+                }}
+              >
+                <span className="name">
+                  <span className="highlight">data</span> for{" "}
+                  <span className="highlight-secondary">humans</span>
+                </span>
+              </span>
+            </h2>
+            <p style={{ textAlign: "right" }}>
+              <b>Data is for humans:</b> the tools we develop, the decisions we
+              make, the code we write. All of it is for humans.
+            </p>
+            <p style={{ textAlign: "right" }}>
+              Whether deciding if it makes sense to fund a project, evaluate a
+              policy, or inform people, we, <b>humans</b>, want to take the
+              right decisions. This starts by understanding the world, and{" "}
+              <b>data</b> is here to help us.
+            </p>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      {/* <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90493.61839615446!2d-0.6684128046921557!3d44.8638098997777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5527e8f751ca81%3A0x796386037b397a89!2sBordeaux!5e0!3m2!1sen!2sfr!4v1761507255585!5m2!1sen!2sfr"
+        width="100%"
+        height="350"
+        style={{ border: 0 }}
+        loading="lazy"
+      ></iframe> */}
+
+      <div
+        className="container"
+        style={{ marginTop: "10rem", maxWidth: "1000px" }}
+      >
         <div className="about-text about-tools">
-          <h2 style={{ textAlign: "right" }}>
+          <h2>
             <span style={{ display: "inline-block" }} className="bottom-line">
               <span className="name">
                 <span className="highlight">about</span>{" "}
