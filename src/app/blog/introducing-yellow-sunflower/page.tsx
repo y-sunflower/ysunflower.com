@@ -43,12 +43,11 @@ const BlogPost1Content = () => {
         or this website.
       </p>
 
-      <h2>Open source & dataviz</h2>
+      <h2>Open source & data visualization</h2>
       <p>
         Most of my open source work focuses on data visualization, and will
-        mostly remain so. The main reason for that is that I believe there are
-        still <b>a lot</b> of things to create, improve, and of course,
-        maintain.
+        mostly remain so. There are still <b>a lot</b> of things to create,
+        improve, and of course, maintain.
       </p>
       <p>
         There are numerous tools that still don&apos;t exist that I believe
@@ -60,9 +59,7 @@ const BlogPost1Content = () => {
       <p>
         Some topics I&apos;m particularly interested in are <b>interactivity</b>
         ,<b> reproducibility</b>, <b>animations</b>, and{" "}
-        <b>developer experience</b>. If that&apos;s something you&apos;re
-        interested in too, feel free to send a message. I would love to chat
-        about it!
+        <b>developer experience</b>.
       </p>
 
       <h2>Consulting</h2>
@@ -71,7 +68,30 @@ const BlogPost1Content = () => {
         more reproducible, and visually clean, from analysis to reports.
       </p>
       <p>
-        If this kind of service is interesting to you, please feel free to{" "}
+        My goal is to make sure <b>data is for humans</b>. Data is here to help
+        us, humans, measure, evaluate, understand, inform and decide.
+      </p>
+      <p>
+        By combining open source development and consulting,{" "}
+        <span className="highlight">yellow</span>{" "}
+        <span className="highlight-secondary">sunflower</span> aims to help
+        teams and individuals get the most out of their data. The focus is
+        always the same: <b>making data work for humans</b>. Whether through
+        tools, guidance, or collaboration, the goal is to turn data into
+        insight, understanding, and action.
+      </p>
+      <p>
+        If you are curious, want to contribute, or are interested in working
+        together, feel free to explore our{" "}
+        <Link href="https://github.com/y-sunflower">GitHub</Link>, check our{" "}
+        <Link href="https://www.linkedin.com/company/yellow-sunflower/">
+          LinkedIn
+        </Link>
+        , or get in touch through this website. Let’s make data human, together.
+      </p>
+
+      <p>
+        If this makes sense to you, please feel free to{" "}
         <Link href="/#contact">contact me</Link>.
       </p>
       <br />

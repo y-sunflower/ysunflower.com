@@ -1,9 +1,8 @@
 export const blogPostData = {
   slug: "introducing-yellow-sunflower",
-  title: "Introducing yellow sunflower",
-  description:
-    "A new organization to develop open source tools for data visualization and storytelling, as well as consulting services.",
+  title: "Introducing yellow sunflower: data for humans",
+  description: "A new company with a focus on open source and data consulting.",
   image: "/logo.png",
   readingTime: "2 min",
-  date: "Aug 2025",
+  date: "Oct 2025",
 };
