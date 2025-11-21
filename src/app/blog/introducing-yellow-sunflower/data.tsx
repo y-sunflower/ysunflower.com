@@ -5,4 +5,5 @@ export const blogPostData = {
   image: "/logo.png",
   readingTime: "2 min",
   date: "Oct 2025",
+  isAvailable: true,
 };

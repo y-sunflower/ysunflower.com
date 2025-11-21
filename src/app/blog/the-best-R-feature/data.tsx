@@ -5,4 +5,5 @@ export const blogPostData = {
   image: "/blog/the-best-R-feature.png",
   readingTime: "",
   date: "",
+  isAvailable: false,
 };

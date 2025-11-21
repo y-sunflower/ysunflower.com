@@ -90,55 +90,6 @@ export default function Home() {
         className="container"
         style={{ marginTop: "10rem", maxWidth: "1000px" }}
       >
-        <div className="about-content">
-          <div className="image-computer">
-            <img
-              src="/computer.jpg"
-              alt="Image of Joseph Barbier, founder of yellow sunflower"
-            />
-            <div style={{ fontSize: "0.8em" }}>
-              <p className="caption">
-                My (small) office, always with a cup of coffee.
-              </p>
-              <p className="caption">
-                <b>Bordeaux, France.</b>
-              </p>
-            </div>
-          </div>
-          <div className="about-text">
-            <h2 style={{ textAlign: "right" }}>
-              <span
-                style={{
-                  display: "inline-block",
-                  borderBottom: "6px solid #ffc300",
-                }}
-              >
-                <span className="name">
-                  <span className="highlight">data</span> for{" "}
-                  <span className="highlight-secondary">humans</span>
-                </span>
-              </span>
-            </h2>
-            <p style={{ textAlign: "right" }}>
-              <b>Data is for humans:</b> the tools we develop, the decisions we
-              make, the code we write. All of it is for humans.
-            </p>
-            <p style={{ textAlign: "right" }}>
-              Whether deciding if it makes sense to fund a project, evaluate a
-              policy, or inform people, we, <b>humans</b>, want to take the
-              right decisions. This starts by understanding the world, and{" "}
-              <b>data</b> is here to help us.
-            </p>
-          </div>
-        </div>
-      </div>
-      <br />
-      <br />
-
-      <div
-        className="container"
-        style={{ marginTop: "10rem", maxWidth: "1000px" }}
-      >
         <div className="about-text about-tools">
           <h2>
             <span style={{ display: "inline-block" }} className="bottom-line">

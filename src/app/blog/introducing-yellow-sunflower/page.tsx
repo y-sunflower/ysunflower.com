@@ -115,4 +115,9 @@ const BlogPost1Content = () => {
   );
 };
 
+export const metadata = {
+  title: blogPostData.title,
+  description: blogPostData.description,
+};
+
 export default BlogPost1Content;

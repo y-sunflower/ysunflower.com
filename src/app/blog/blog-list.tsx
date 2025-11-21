@@ -12,6 +12,7 @@ export type BlogPost = {
   readingTime: string;
   date: string;
   content: React.JSX.Element;
+  isAvailable: boolean;
 };
 
 export const blogPosts: BlogPost[] = [
