@@ -49,17 +49,17 @@ const Footer: React.FC = () => {
             </Link>
           </div>
           <div className="footer-col">
-            <h3>Socials</h3>
+            <h3>Contact & Social</h3>
+            <p>joseph@ysunflower.com</p>
             <Link href="https://github.com/y-sunflower">Github</Link>
             <Link href="https://www.linkedin.com/company/yellow-sunflower/">
               LinkedIn
             </Link>
-            <Link href="/about">About</Link>
           </div>
           <div className="footer-col">
-            <h3>Contact</h3>
-            <p>joseph.barbierdarnal@gmail.com</p>
-            <p>Made in France</p>
+            <h3>Terms & Policies</h3>
+            <Link href="/legal">Legal</Link>
+            <Link href="/about">About</Link>
           </div>
         </div>
         <div className="copyright">

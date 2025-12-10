@@ -197,9 +197,7 @@ export default function Home() {
                 below.
               </p>
               <p>
-                <a href="mailto:joseph.barbierdarnal@gmail.com">
-                  joseph.barbierdarnal@gmail.com
-                </a>
+                <a href="mailto:joseph@ysunflower.com">joseph@ysunflower.com</a>
               </p>
             </div>
             <div className="form-section">
