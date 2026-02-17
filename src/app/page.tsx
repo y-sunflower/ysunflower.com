@@ -99,7 +99,7 @@ export default function Home() {
               reporting workflows.
             </p>
           </div>
-          <div style={{ margin: "2em 1em" }}>
+          <div>
             <Companies />
           </div>
         </div>
