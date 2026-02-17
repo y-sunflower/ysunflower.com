@@ -93,7 +93,9 @@
   color: #3d3d3d;
   padding: 0.42rem 0.7rem;
   font-size: 0.94rem;
-  transition: transform 0.25s ease, background-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
 }
 
 .flow-chip:hover {
@@ -156,8 +158,8 @@
     opacity: 1;
   }
   100% {
-    left: calc(100% - 8px);
-    opacity: 0;
+    left: calc(100%);
+    opacity: 0.7;
   }
 }
 

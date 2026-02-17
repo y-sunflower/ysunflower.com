@@ -22,7 +22,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({
   const [downloadCount, setDownloadCount] = useState<string | null>(null);
 
   const documentationUrl = `https://y-sunflower.github.io/${packageName}/`;
-  const logoUrl = `https://github.com/JosephBARBIERDARNAL/static/blob/main/python-libs/${packageName}/image.png?raw=true`;
+  const logoUrl = `https://github.com/JosephBARBIERDARNAL/static/blob/main/${packageLang.toLocaleLowerCase()}-libs/${packageName}/image.png?raw=true`;
   const altText = `${packageName} ${packageLang} package official logo`;
 
   useEffect(() => {

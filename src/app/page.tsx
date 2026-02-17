@@ -9,6 +9,18 @@ export default function Home() {
     <>
       <Hero />
 
+      <section style={{ marginTop: "8rem" }}>
+        <DataPipeline />
+      </section>
+
+      <div className="button-variant consulting-cta-row">
+        <PushButton
+          text={"Discuss your project"}
+          link={"/#contact"}
+          fontSize="1.1em"
+        />
+      </div>
+
       <div id="consulting" style={{ marginTop: "12rem" }}></div>
 
       <section>
@@ -69,18 +81,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <section style={{ marginTop: "8rem" }}>
-        <DataPipeline />
-      </section>
-
-      <div className="button-variant consulting-cta-row">
-        <PushButton
-          text={"Discuss your project"}
-          link={"/#contact"}
-          fontSize="1.1em"
-        />
-      </div>
 
       <section style={{ marginTop: "8rem" }}>
         <div className="container">
