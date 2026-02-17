@@ -7,7 +7,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "yellow sunflower",
   description:
-    "Open source tools for data science, data visualization and storytelling",
+    "Data consulting for reproducible reporting and automation, with open-source tools for modern data workflows",
   icons: {
     icon: "/favicon.ico",
   },

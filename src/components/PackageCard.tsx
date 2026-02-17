@@ -7,28 +7,29 @@ import "../styles/package-card.css";
 
 interface PackageCardProps {
   packageName: string;
+  packageLang: string;
   packageDescription: string;
-  packageTags: string[];
+  isBeta: boolean;
 }
 
 export const PackageCard: React.FC<PackageCardProps> = ({
   packageName,
+  packageLang,
   packageDescription,
-  packageTags,
+  isBeta,
 }) => {
   const [starCount, setStarCount] = useState<number | null>(null);
   const [downloadCount, setDownloadCount] = useState<string | null>(null);
 
-  const githubUrl = `https://github.com/y-sunflower/${packageName}`;
   const documentationUrl = `https://y-sunflower.github.io/${packageName}/`;
-  const logoUrl = `https://github.com/JosephBARBIERDARNAL/static/blob/main/python-libs/${packageName}/image.png?raw=true`;
-  const altText = `${packageName} Python package official logo`;
+  const logoUrl = `https://github.com/JosephBARBIERDARNAL/static/blob/main/${packageLang.toLocaleLowerCase()}-libs/${packageName}/image.png?raw=true`;
+  const altText = `${packageName} ${packageLang} package official logo`;
 
   useEffect(() => {
     async function fetchGitHubStars() {
       try {
         const res = await fetch(
-          `/api/github-stars?user=y-sunflower&repo=${packageName}`
+          `/api/github-stars?user=y-sunflower&repo=${packageName}`,
         );
         const data = await res.json();
         if (data.stargazers_count !== undefined) {
@@ -47,6 +48,11 @@ export const PackageCard: React.FC<PackageCardProps> = ({
 
   useEffect(() => {
     async function fetchDownloadCount() {
+      if (packageLang !== "Python") {
+        setDownloadCount("N/A");
+        return;
+      }
+
       try {
         const svgUrl = `https://static.pepy.tech/badge/${packageName}`;
         const res = await fetch(svgUrl);
@@ -61,14 +67,18 @@ export const PackageCard: React.FC<PackageCardProps> = ({
           .map((el) => el.textContent?.trim())
           .filter((t) => t && t.toLowerCase() !== "downloads");
 
-        if (values.length) setDownloadCount(values[0]!);
+        if (values.length) {
+          setDownloadCount(values[0]!);
+        } else {
+          setDownloadCount("N/A");
+        }
       } catch (err) {
         console.error("Error fetching PyPI downloads:", err);
-        setDownloadCount(null);
+        setDownloadCount("N/A");
       }
     }
     fetchDownloadCount();
-  }, [packageName]);
+  }, [packageLang, packageName]);
 
   return (
     <>
@@ -79,6 +89,18 @@ export const PackageCard: React.FC<PackageCardProps> = ({
           </div>
           <div>
             <div className="package-title">{packageName}</div>
+            <div className="package-meta">
+              <span className="package-badge package-badge-lang">
+                {packageLang}
+              </span>
+              <span
+                className={`package-badge ${
+                  isBeta ? "package-badge-beta" : "package-badge-stable"
+                }`}
+              >
+                {isBeta ? "Beta" : "Stable"}
+              </span>
+            </div>
           </div>
         </div>
         <div className="package-description">{packageDescription}</div>
@@ -107,29 +129,16 @@ export const PackageCard: React.FC<PackageCardProps> = ({
                 {downloadCount !== null ? downloadCount : "..."}
               </span>
             </div>
-          </div>
-          <div className="package-tags">
-            {packageTags.map((tag, index) => (
-              <span key={index} className="tag">
-                {tag}
-              </span>
-            ))}
-          </div>
-          <div className="package-links">
-            <Link
-              href={documentationUrl}
-              className="link-btn primary"
-              target="_blank"
-            >
-              Documentation
-            </Link>
-            <Link
-              href={githubUrl}
-              className="link-btn secondary"
-              target="_blank"
-            >
-              GitHub
-            </Link>
+            <div className="stat-doc-link">
+              <Link
+                href={documentationUrl}
+                className="link-btn primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Documentation
+              </Link>
+            </div>
           </div>
         </div>
       </div>

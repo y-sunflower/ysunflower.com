@@ -1,7 +1,7 @@
 .package-card {
   background: var(--background-primary-color);
   border-radius: 16px;
-  padding: 2rem;
+  padding: 1.6rem;
   box-shadow: 0 4px 20px rgba(90, 24, 154, 0.08);
   border: 1px solid var(--light-primary);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -69,6 +69,40 @@
   margin-bottom: 0.25rem;
 }
 
+.package-meta {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.package-badge {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06rem;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid transparent;
+}
+
+.package-badge-lang {
+  background: rgba(90, 24, 154, 0.1);
+  border-color: rgba(90, 24, 154, 0.22);
+  color: var(--secondary-color);
+}
+
+.package-badge-beta {
+  background: rgba(255, 195, 0, 0.2);
+  border-color: rgba(255, 195, 0, 0.55);
+  color: #5f4300;
+}
+
+.package-badge-stable {
+  background: rgba(35, 128, 85, 0.14);
+  border-color: rgba(35, 128, 85, 0.4);
+  color: #1a6b47;
+}
+
 .package-description {
   margin-bottom: 1.5rem;
   line-height: 1.7;
@@ -77,8 +111,10 @@
 
 .package-stats {
   display: flex;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  margin-bottom: 0.5rem;
 }
 
 .stat {
@@ -96,56 +132,35 @@
   fill: var(--secondary-color);
 }
 
-.package-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.tag {
-  padding: 0.25rem 0.75rem;
-  background: var(--light-primary);
-  color: var(--secondary-color);
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-.package-links {
-  display: flex;
-  gap: 1rem;
-}
-
 .link-btn {
   flex: 1;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.1rem;
   border: none;
   border-radius: 8px;
   font-family: var(--primary-font);
   font-weight: 500;
+  font-size: 0.9rem;
   text-decoration: none;
   text-align: center;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
+.package-stats .link-btn {
+  flex: initial;
+}
+
+.stat-doc-link {
+  margin-left: auto;
+}
+
 .link-btn.primary {
-  background: var(--secondary-color);
-  color: white;
-}
-
-.link-btn.primary:hover {
-  transform: translateY(-2px);
-}
-
-.link-btn.secondary {
   background: var(--light-primary);
   color: var(--secondary-color);
   border: 1px solid rgba(255, 195, 0, 0.3);
 }
 
-.link-btn.secondary:hover {
+.link-btn.primary:hover {
   background: var(--primary-color);
   color: var(--secondary-color);
 }
@@ -246,6 +261,10 @@
 
   .link-btn {
     padding: 0.5rem 0.6rem;
+  }
+
+  .stat-doc-link {
+    margin-left: 0;
   }
 
   a.link-btn {
