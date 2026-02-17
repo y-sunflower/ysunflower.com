@@ -54,7 +54,6 @@ export default function DataPipeline() {
           <div className="flow-connector" aria-hidden="true">
             <span className="flow-track"></span>
             <span className="flow-dot"></span>
-            <span className="flow-dot flow-dot-delay"></span>
           </div>
 
           <article className="flow-node flow-node-tools">
@@ -72,7 +71,6 @@ export default function DataPipeline() {
           <div className="flow-connector" aria-hidden="true">
             <span className="flow-track"></span>
             <span className="flow-dot"></span>
-            <span className="flow-dot flow-dot-delay"></span>
           </div>
 
           <article className="flow-node flow-node-output">

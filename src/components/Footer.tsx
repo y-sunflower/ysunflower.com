@@ -21,33 +21,10 @@ const Footer: React.FC = () => {
           <div className="footer-col">
             <h3>Open source</h3>
             <Link href="/open-source">All projects</Link>
-            <Link
-              href="https://github.com/y-sunflower/pypalettes"
-              target="_blank"
-            >
-              pypalettes
+            <Link href="/open-source#opensource-packages">
+              Python & R packages
             </Link>
-            <Link href="https://github.com/y-sunflower/pyfonts" target="_blank">
-              pyfonts
-            </Link>
-            <Link
-              href="https://github.com/y-sunflower/drawarrow"
-              target="_blank"
-            >
-              drawarrow
-            </Link>
-            <Link
-              href="https://github.com/y-sunflower/morethemes"
-              target="_blank"
-            >
-              morethemes
-            </Link>
-            <Link href="https://github.com/y-sunflower/dayplot" target="_blank">
-              dayplot
-            </Link>
-            <Link href="https://github.com/y-sunflower/bumplot" target="_blank">
-              bumplot
-            </Link>
+            <Link href="/open-source#opensource-resources">Resources</Link>
           </div>
           <div className="footer-col">
             <h3>Social</h3>

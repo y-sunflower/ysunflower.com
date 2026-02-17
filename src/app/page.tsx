@@ -74,6 +74,14 @@ export default function Home() {
         <DataPipeline />
       </section>
 
+      <div className="button-variant consulting-cta-row">
+        <PushButton
+          text={"Discuss your project"}
+          link={"/#contact"}
+          fontSize="1.1em"
+        />
+      </div>
+
       <section style={{ marginTop: "8rem" }}>
         <div className="container">
           <div className="opensource-text consulting-focus">
@@ -114,7 +122,7 @@ export default function Home() {
               <p className="intro-text">
                 Tell us about your data sources, reporting goals, and current
                 workflow. We can help you design a reproducible pipeline and
-                deliver clean PDF or web outputs.
+                deliver clean PDF or web dashboards.
               </p>
               <p>
                 <a href="mailto:joseph@ysunflower.com">joseph@ysunflower.com</a>

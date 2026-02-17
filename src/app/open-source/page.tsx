@@ -55,7 +55,7 @@ export default function OpenSourcePage() {
             </div>
           </div>
 
-          <div className="open-source-section-header">
+          <div className="open-source-section-header" id="opensource-packages">
             <h3>Packages</h3>
             <p>
               Libraries designed for practical data visualization, reporting,
@@ -80,6 +80,7 @@ export default function OpenSourcePage() {
           <div
             className="open-source-section-header"
             style={{ marginTop: "6rem" }}
+            id="opensource-resources"
           >
             <h3>Resources</h3>
             <p>
