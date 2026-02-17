@@ -67,7 +67,7 @@ export default function Hero() {
     <section className="hero" id="home">
       <div className="container hero-content">
         <p>
-          Open-source tools and consulting to help teams{" "}
+          Consulting to help teams{" "}
           <WordChanger
             words={["visualize", "communicate", "understand", "trust"]}
             interval={2500}
@@ -79,14 +79,8 @@ export default function Hero() {
           <span className="highlight">Data</span> for{" "}
           <span className="highlight-secondary">humans</span>
         </h1>
-        <p className="hero-description">
-          <b>Dozens</b> of successful projects, <b>hundreds of thousands</b>{" "}
-          downloads, and <b>thousands</b> of people helped. Because{" "}
-          <span className="highlight">data</span> <b>is for</b>{" "}
-          <span className="highlight-secondary">humans</span>.
-        </p>
         <div className="button-variant" style={{ marginTop: "2em" }}>
-          <PushButton text="Work With Us" link="/#contact" fontSize="0.9em" />
+          <PushButton text="Work with us" link="/#contact" fontSize="0.9em" />
         </div>
       </div>
       <ParticlesBackground

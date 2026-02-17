@@ -1,39 +1,78 @@
 type PackageProps = {
   packageName: string;
+  packageLang: string;
   packageDescription: string;
-  packageTags: string[];
+  isBeta: boolean;
 };
 
 export const packageList: PackageProps[] = [
   {
     packageName: "pypalettes",
+    isBeta: false,
+    packageLang: "Python",
     packageDescription: "A large (+2500) collection of color maps for Python",
-    packageTags: ["matplotlib", "color"],
   },
   {
     packageName: "pyfonts",
+    isBeta: false,
+    packageLang: "Python",
     packageDescription:
       "A simple and reproducible way of using fonts in matplotlib",
-    packageTags: ["matplotlib", "font", "reproductibility"],
   },
   {
     packageName: "morethemes",
+    isBeta: false,
+    packageLang: "Python",
     packageDescription: "More themes for matplotlib",
-    packageTags: ["matplotlib", "theme"],
   },
   {
     packageName: "drawarrow",
+    isBeta: false,
+    packageLang: "Python",
     packageDescription: "Drawing arrows for matplotlib made easy",
-    packageTags: ["matplotlib", "arrow"],
   },
   {
     packageName: "dayplot",
+    isBeta: false,
+    packageLang: "Python",
     packageDescription: "Calendar heatmaps with matplotlib",
-    packageTags: ["matplotlib", "calendar", "heatmap"],
+  },
+  {
+    packageName: "plotjs",
+    isBeta: true,
+    packageLang: "Python",
+    packageDescription:
+      "Turn static matplotlib charts into interactive web visualizations",
   },
   {
     packageName: "bumplot",
+    isBeta: false,
+    packageLang: "Python",
     packageDescription: "Easily create and customize bump charts in Python",
-    packageTags: ["matplotlib", "bump", "curve"],
+  },
+  {
+    packageName: "realcolor",
+    isBeta: true,
+    packageLang: "Python",
+    packageDescription: "Simulate colorblindness in Python charts",
+  },
+  {
+    packageName: "r2typ",
+    isBeta: true,
+    packageLang: "R",
+    packageDescription:
+      "r2typ (R to Typst): An R package for generating Typst markup",
+  },
+  {
+    packageName: "snaplot",
+    isBeta: true,
+    packageLang: "Python",
+    packageDescription: "Record your plot process",
+  },
+  {
+    packageName: "gifing",
+    isBeta: true,
+    packageLang: "Python",
+    packageDescription: "A lightweight python tool for creating GIFs",
   },
 ];

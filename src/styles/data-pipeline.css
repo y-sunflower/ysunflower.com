@@ -1,0 +1,235 @@
+.pipeline-flow-shell {
+  position: relative;
+  margin-top: 2.5rem;
+  border: 1px solid rgba(90, 24, 154, 0.14);
+  border-radius: 28px;
+  padding: 2rem 1.4rem 1.4rem;
+  background: linear-gradient(160deg, #ffffff 0%, #f8fafc 56%, #fff9e8 100%);
+  overflow: hidden;
+}
+
+.pipeline-flow-shell::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  top: -100px;
+  left: -70px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 195, 0, 0.2) 0%,
+    rgba(255, 195, 0, 0) 70%
+  );
+  pointer-events: none;
+}
+
+.pipeline-flow-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 120px minmax(0, 1fr) 120px minmax(
+      0,
+      1fr
+    );
+  gap: 0.8rem;
+  align-items: stretch;
+  z-index: 1;
+}
+
+.flow-node {
+  border-radius: 20px;
+  border: 1px solid rgba(90, 24, 154, 0.18);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 14px 30px rgba(90, 24, 154, 0.08);
+  padding: 1.2rem;
+}
+
+.flow-node-tools {
+  border-color: rgba(255, 195, 0, 0.45);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 195, 0, 0.16) 0%,
+    rgba(255, 255, 255, 0.94) 68%
+  );
+}
+
+.flow-node-output {
+  border-color: rgba(90, 24, 154, 0.3);
+  background: linear-gradient(
+    180deg,
+    rgba(90, 24, 154, 0.11) 0%,
+    rgba(255, 255, 255, 0.96) 64%
+  );
+}
+
+.flow-kicker {
+  margin: 0 0 0.45rem;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.flow-node h3 {
+  margin: 0 0 0.95rem;
+  font-size: 1.35rem;
+  color: var(--text-color);
+}
+
+.flow-chip-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.flow-chip {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: 10px;
+  border: 1px solid rgba(90, 24, 154, 0.2);
+  background: #f9fbff;
+  color: #3d3d3d;
+  padding: 0.42rem 0.7rem;
+  font-size: 0.94rem;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.flow-chip:hover {
+  transform: translateX(4px);
+}
+
+.flow-chip-accent {
+  border-color: rgba(255, 195, 0, 0.65);
+  background: rgba(255, 195, 0, 0.18);
+}
+
+.flow-chip-strong {
+  border-color: rgba(90, 24, 154, 0.32);
+  background: rgba(90, 24, 154, 0.08);
+}
+
+.flow-connector {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flow-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 195, 0, 0.16) 0%,
+    rgba(255, 195, 0, 0.55) 30%,
+    rgba(90, 24, 154, 0.62) 68%,
+    rgba(90, 24, 154, 0.2) 100%
+  );
+  background-size: 200% 100%;
+  animation: trackShift 4.5s linear infinite;
+  box-shadow: inset 0 0 0 1px rgba(90, 24, 154, 0.12);
+}
+
+.flow-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  left: 2px;
+  box-shadow: 0 0 0 5px rgba(255, 195, 0, 0.22);
+  animation: dotFlow 2.2s ease-in-out infinite;
+}
+
+.flow-dot-delay {
+  width: 10px;
+  height: 10px;
+  background: var(--secondary-color);
+  box-shadow: 0 0 0 5px rgba(90, 24, 154, 0.14);
+  animation-delay: 0.9s;
+}
+
+.flow-caption {
+  margin-top: 1.2rem;
+  text-align: center;
+}
+
+.flow-caption p {
+  font-size: 1rem;
+  color: #4e4e4e;
+}
+
+@keyframes dotFlow {
+  0% {
+    left: 2px;
+    opacity: 0.1;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    left: calc(100% - 12px);
+    opacity: 0.3;
+  }
+}
+
+@keyframes trackShift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@media (max-width: 1080px) {
+  .pipeline-flow-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .flow-connector {
+    min-height: 62px;
+  }
+
+  .flow-track {
+    width: 10px;
+    height: 100%;
+    min-height: 62px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 195, 0, 0.16) 0%,
+      rgba(255, 195, 0, 0.55) 30%,
+      rgba(90, 24, 154, 0.62) 68%,
+      rgba(90, 24, 154, 0.2) 100%
+    );
+    background-size: 100% 200%;
+  }
+
+  .flow-dot {
+    left: auto;
+    top: 2px;
+    animation: dotFlowVertical 2.2s ease-in-out infinite;
+  }
+
+  .flow-dot-delay {
+    animation-delay: 0.9s;
+  }
+}
+
+@keyframes dotFlowVertical {
+  0% {
+    top: 2px;
+    opacity: 0.1;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    top: calc(100% - 12px);
+    opacity: 0.3;
+  }
+}

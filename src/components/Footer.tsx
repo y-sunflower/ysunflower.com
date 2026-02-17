@@ -20,6 +20,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="footer-col">
             <h3>Open source</h3>
+            <Link href="/open-source">All projects</Link>
             <Link
               href="https://github.com/y-sunflower/pypalettes"
               target="_blank"
@@ -49,12 +50,12 @@ const Footer: React.FC = () => {
             </Link>
           </div>
           <div className="footer-col">
-            <h3>Contact & Social</h3>
-            <p>joseph@ysunflower.com</p>
+            <h3>Social</h3>
             <Link href="https://github.com/y-sunflower">Github</Link>
             <Link href="https://www.linkedin.com/company/yellow-sunflower/">
               LinkedIn
             </Link>
+            <Link href="https://www.youtube.com/@ysunflower-data">YouTube</Link>
           </div>
           <div className="footer-col">
             <h3>Terms & Policies</h3>
@@ -63,7 +64,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="copyright">
-          <p>&copy; 2025 yellow sunflower. All rights reserved.</p>
+          <p>&copy; 2026 yellow sunflower. All rights reserved.</p>
         </div>
       </div>
     </footer>

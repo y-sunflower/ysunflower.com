@@ -1,134 +1,19 @@
 import Hero from "../components/Hero";
 import { ContactForm } from "../components/Form";
 import Companies from "../components/Companies";
-import Link from "next/link";
 import PushButton from "../components/Button";
-import { packageList } from "../lists/packages-list";
-import PackageCard from "../components/PackageCard";
+import DataPipeline from "../components/DataPipeline";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <section
-        className="intro-ys"
-        id="intro-ys"
-        style={{ marginBottom: "15em" }}
-      >
-        <div className="container">
-          <div className="intro-ys-content">
-            <div
-              style={{
-                width: "25%",
-                justifyContent: "center",
-                display: "flex",
-              }}
-            >
-              <img
-                src="/logo.png"
-                style={{ maxWidth: "100%", height: "auto" }}
-                className="rotate landing-logo"
-                alt="logo of yellow sunflower, which is a yellow sunflower with a purple center"
-              />
-            </div>
-            <div className="intro-ys-text" style={{ textAlign: "right" }}>
-              <h2>
-                <span
-                  className="bottom-line"
-                  style={{ display: "inlineBlock" }}
-                >
-                  <span className="name">
-                    <span className="highlight">yellow</span>{" "}
-                    <span className="highlight-secondary">sunflower</span>
-                  </span>
-                </span>
-              </h2>
-              <p>
-                <span className="name">
-                  <span className="highlight">yellow</span>{" "}
-                  <span className="highlight-secondary">sunflower</span>
-                </span>{" "}
-                is an <span style={{ fontWeight: "600" }}>open source</span> and{" "}
-                <span style={{ fontWeight: "600" }}>consulting</span> company,
-                that focuses on data visualization. To find out more, read the{" "}
-                <Link href="/blog/introducing-yellow-sunflower">
-                  announcement&apos;s blog post
-                </Link>
-                .
-              </p>
-              <div
-                style={{
-                  display: "flex",
-                  gap: "1rem",
-                  justifyContent: "flex-end",
-                }}
-              >
-                <PushButton
-                  text={"open source"}
-                  link={"https://github.com/y-sunflower"}
-                  fontSize="1em"
-                />
-                <PushButton
-                  text={"consulting"}
-                  link={"/#contact"}
-                  fontSize="1em"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <div id="opensource" style={{ marginBottom: "15rem" }}></div>
+      <div id="consulting" style={{ marginTop: "12rem" }}></div>
 
       <section>
         <div className="container">
-          <div className="opensource-text">
-            <h2>
-              <span className="bottom-line">
-                <span className="name">
-                  <span className="highlight">Open</span>{" "}
-                  <span className="highlight-secondary">source</span>
-                </span>
-              </span>
-            </h2>
-            <p>
-              Open source is at the core of{" "}
-              <span className="highlight">yellow</span>{" "}
-              <span className="highlight-secondary">sunflower</span>. All
-              projects are released under permissive licenses and designed to be{" "}
-              <b>simple</b>, <b>useful</b>, and <b>easy to extend</b>.
-            </p>
-          </div>
-          <div className="packages-grid">
-            {packageList.map(
-              ({ packageName, packageDescription, packageTags }) => (
-                <PackageCard
-                  key={packageName}
-                  packageName={packageName}
-                  packageDescription={packageDescription}
-                  packageTags={packageTags}
-                />
-              )
-            )}
-          </div>
-          <p className="caption">
-            Want to contribute? <b>Great!</b> It&apos;s all happening on{" "}
-            <Link href="https://github.com/y-sunflower">Github</Link>.
-          </p>
-          <br />
-          <p className="caption">
-            Need help getting started? <b>No problem</b>, just open an issue
-            with your questions!
-          </p>
-        </div>
-      </section>
-
-      <div id="consulting" style={{ marginTop: "15rem" }}></div>
-
-      <section>
-        <div className="container">
-          <div className="opensource-text">
+          <div className="opensource-text consulting-focus">
             <h2 style={{ textAlign: "right" }}>
               <span className="bottom-line">
                 <span className="name">
@@ -137,42 +22,77 @@ export default function Home() {
                 </span>
               </span>
             </h2>
-            <p style={{ marginBottom: "auto" }}>
-              <span className="highlight">yellow</span>{" "}
-              <span className="highlight-secondary">sunflower</span> helps teams
-              turn raw data into clear insights. We provide{" "}
-              <span style={{ fontWeight: "600" }}>
-                custom data visualization
-              </span>
-              ,{" "}
-              <span style={{ fontWeight: "600" }}>
-                reproducible analysis pipelines
-              </span>
-              , and{" "}
-              <span style={{ fontWeight: "600" }}>
-                open-source tool integration
-              </span>{" "}
-              to make your data work for you.
+            <p>
+              We help teams turn disconnected spreadsheets, CSV files, and
+              operational data into reports people can trust and act on.
             </p>
-            <div style={{ margin: "2em 1em" }}>
-              <Companies />
+            <div className="consulting-pillar-grid">
+              <div className="consulting-pillar">
+                <h3>Build clarity</h3>
+                <p>
+                  Transform raw files into decision-ready dashboards and
+                  narrative reports.
+                </p>
+              </div>
+              <div className="consulting-pillar">
+                <h3>Make it reproducible</h3>
+                <p>
+                  Replace manual copy-paste steps with versioned workflows and
+                  reliable report generation.
+                </p>
+              </div>
+              <div className="consulting-pillar">
+                <h3>Automate delivery</h3>
+                <p>
+                  Schedule output generation and publishing so teams always have
+                  up-to-date PDF or web reports.
+                </p>
+              </div>
             </div>
             <p>
-              Whether you need dashboards for decision-making, automated
-              reporting, or guidance on modern data workflows, we can support
-              you{" "}
-              <span style={{ fontWeight: "600" }}>
-                from design to deployment
-              </span>
-              .{" "}
+              Whether you need faster reporting, stronger data storytelling, or
+              guidance on modern data tooling, we support your project{" "}
+              <b>from design to deployment</b>.
             </p>
           </div>
-          <div className="button-variant">
+          <div className="button-variant consulting-cta-row">
             <PushButton
-              text={"Work With Us"}
+              text={"Discuss your project"}
               link={"/#contact"}
-              fontSize="1.2em"
+              fontSize="1.1em"
             />
+            <PushButton
+              text={"Explore open source"}
+              link={"/open-source"}
+              fontSize="1.1em"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section style={{ marginTop: "8rem" }}>
+        <DataPipeline />
+      </section>
+
+      <section style={{ marginTop: "8rem" }}>
+        <div className="container">
+          <div className="opensource-text consulting-focus">
+            <h2 style={{ textAlign: "right" }}>
+              <span className="bottom-line">
+                <span className="name">
+                  <span className="highlight">trusted</span>{" "}
+                  <span className="highlight-secondary">by teams</span>
+                </span>
+              </span>
+            </h2>
+            <p>
+              We have collaborated with research labs, nonprofits, education
+              organizations, and private companies on data communication and
+              reporting workflows.
+            </p>
+          </div>
+          <div style={{ margin: "2em 1em" }}>
+            <Companies />
           </div>
         </div>
       </section>
@@ -192,9 +112,9 @@ export default function Home() {
                 </span>
               </h2>
               <p className="intro-text">
-                I’d love to hear from you! Whether you have a question, want to
-                collaborate, or just want to say hi, feel free to drop a message
-                below.
+                Tell us about your data sources, reporting goals, and current
+                workflow. We can help you design a reproducible pipeline and
+                deliver clean PDF or web outputs.
               </p>
               <p>
                 <a href="mailto:joseph@ysunflower.com">joseph@ysunflower.com</a>
