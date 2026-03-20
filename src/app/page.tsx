@@ -9,7 +9,9 @@ export default function Home() {
     <>
       <Hero />
 
-      <section style={{ marginTop: "8rem" }}>
+      <div id="consulting" style={{ marginTop: "12rem" }}></div>
+
+      <section>
         <DataPipeline />
       </section>
 
@@ -21,71 +23,10 @@ export default function Home() {
         />
       </div>
 
-      <div id="consulting" style={{ marginTop: "12rem" }}></div>
-
-      <section>
-        <div className="container">
-          <div className="opensource-text consulting-focus">
-            <h2 style={{ textAlign: "right" }}>
-              <span className="bottom-line">
-                <span className="name">
-                  <span className="highlight">data</span>{" "}
-                  <span className="highlight-secondary">consulting</span>
-                </span>
-              </span>
-            </h2>
-            <p>
-              We help teams turn disconnected spreadsheets, CSV files, and
-              operational data into reports people can trust and act on.
-            </p>
-            <div className="consulting-pillar-grid">
-              <div className="consulting-pillar">
-                <h3>Build clarity</h3>
-                <p>
-                  Transform raw files into decision-ready dashboards and
-                  narrative reports.
-                </p>
-              </div>
-              <div className="consulting-pillar">
-                <h3>Make it reproducible</h3>
-                <p>
-                  Replace manual copy-paste steps with versioned workflows and
-                  reliable report generation.
-                </p>
-              </div>
-              <div className="consulting-pillar">
-                <h3>Automate delivery</h3>
-                <p>
-                  Schedule output generation and publishing so teams always have
-                  up-to-date PDF or web reports.
-                </p>
-              </div>
-            </div>
-            <p>
-              Whether you need faster reporting, stronger data storytelling, or
-              guidance on modern data tooling, we support your project{" "}
-              <b>from design to deployment</b>.
-            </p>
-          </div>
-          <div className="button-variant consulting-cta-row">
-            <PushButton
-              text={"Discuss your project"}
-              link={"/#contact"}
-              fontSize="1.1em"
-            />
-            <PushButton
-              text={"Explore open source"}
-              link={"/open-source"}
-              fontSize="1.1em"
-            />
-          </div>
-        </div>
-      </section>
-
       <section style={{ marginTop: "8rem" }}>
         <div className="container">
           <div className="opensource-text consulting-focus">
-            <h2 style={{ textAlign: "right" }}>
+            <h2>
               <span className="bottom-line">
                 <span className="name">
                   <span className="highlight">trusted</span>{" "}
@@ -99,10 +40,8 @@ export default function Home() {
               reporting workflows.
             </p>
           </div>
-          <div>
-            <Companies />
-          </div>
         </div>
+        <Companies />
       </section>
 
       <div id="contact" style={{ marginBottom: "15rem" }}></div>

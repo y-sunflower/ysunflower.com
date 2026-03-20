@@ -64,6 +64,12 @@ export const packageList: PackageProps[] = [
       "r2typ (R to Typst): An R package for generating Typst markup",
   },
   {
+    packageName: "tynding",
+    isBeta: true,
+    packageLang: "R",
+    packageDescription: "Typst bindings for R",
+  },
+  {
     packageName: "snaplot",
     isBeta: true,
     packageLang: "Python",

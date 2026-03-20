@@ -27,13 +27,15 @@ export default function DataPipeline() {
           <span className="bottom-line">
             <span className="name">
               <span className="highlight">data</span>{" "}
-              <span className="highlight-secondary">pipelines</span>
+              <span className="highlight-secondary">consulting</span>
             </span>
           </span>
         </h2>
         <p>
           From manual spreadsheets to automated reporting systems, we design
-          workflows that are visual, reproducible, and easy to maintain.
+          workflows that are visual, reproducible, and easy to maintain. We help
+          teams turn disconnected spreadsheets, CSV files, and operational data
+          into reports people can trust and act on.
         </p>
       </div>
 

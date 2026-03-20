@@ -74,25 +74,39 @@ export default function Companies() {
     },
   ];
 
+  const renderCompany = (company: (typeof companies)[number], duplicate = false) => (
+    <a
+      key={`${company.href}-${duplicate ? "duplicate" : "primary"}`}
+      className="logo-item"
+      href={company.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ width: company.maxWidth }}
+      tabIndex={duplicate ? -1 : undefined}
+    >
+      <img
+        src={company.src}
+        alt={company.alt}
+        width={company.maxWidth}
+        className="company-logo"
+        loading="lazy"
+        decoding="async"
+      />
+    </a>
+  );
+
   return (
-    <div className="container logo-container">
-      <div className="logo-grid">
-        {companies.map((company, index) => (
-          <a
-            key={index}
-            href={company.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ maxWidth: company.maxWidth }}
-          >
-            <img
-              src={company.src}
-              alt={company.alt}
-              width={company.maxWidth}
-              className="company-logo"
-            />
-          </a>
-        ))}
+    <div
+      className="logo-marquee"
+      aria-label="Organizations Yellow Sunflower has worked with"
+    >
+      <div className="logo-track">
+        <div className="logo-group">
+          {companies.map((company) => renderCompany(company))}
+        </div>
+        <div className="logo-group" aria-hidden="true">
+          {companies.map((company) => renderCompany(company, true))}
+        </div>
       </div>
     </div>
   );

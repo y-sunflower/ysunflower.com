@@ -158,7 +158,7 @@ body {
   margin-bottom: 3rem;
 }
 
-a:not(#header a):not(footer a):not(.logo-grid a):not(.packages-grid a):not(
+a:not(#header a):not(footer a):not(.logo-marquee a):not(.packages-grid a):not(
     .cool-button
   ):not(div.blog-list a) {
   position: relative;
@@ -166,7 +166,7 @@ a:not(#header a):not(footer a):not(.logo-grid a):not(.packages-grid a):not(
   color: var(--secondary-color);
 }
 
-a:not(#header a):not(footer a):not(.logo-grid a):not(.packages-grid a):not(
+a:not(#header a):not(footer a):not(.logo-marquee a):not(.packages-grid a):not(
     .cool-button
   ):not(div.blog-list a)::after {
   content: "";
@@ -186,28 +186,79 @@ li:not(nav li) {
   list-style-type: circle;
 }
 
-.logo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 2rem;
-  align-items: center;
-  justify-items: center;
+.logo-marquee {
+  --logo-gap: clamp(2.5rem, 6vw, 5rem);
+  --logo-duration: 42s;
+  width: 100%;
+  overflow: hidden;
+  padding: 1.5rem 0;
+  position: relative;
 }
 
-.logo-container {
-  max-width: 1400px;
-  margin: auto;
-  text-align: center;
+.logo-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: logoMarquee var(--logo-duration) linear infinite;
+}
+
+.logo-marquee:hover .logo-track {
+  animation-play-state: paused;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: var(--logo-gap);
+  padding-right: var(--logo-gap);
+  flex-shrink: 0;
+}
+
+.logo-item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-item:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 0.5rem;
+  border-radius: 12px;
 }
 
 img.company-logo {
-  filter: grayscale(0);
-  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: grayscale(1);
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-img.company-logo:hover {
-  filter: grayscale(1);
-  rotate: 2deg;
+.logo-item:hover img.company-logo,
+.logo-item:focus-visible img.company-logo {
+  filter: grayscale(0);
+  transform: rotate(2deg);
+}
+
+@keyframes logoMarquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee {
+    overflow-x: auto;
+  }
+
+  .logo-track {
+    animation: none;
+  }
 }
 
 p.caption {
@@ -342,5 +393,9 @@ img.rotate {
 
   .landing-logo {
     display: none;
+  }
+
+  .logo-marquee {
+    --logo-gap: 1.75rem;
   }
 }

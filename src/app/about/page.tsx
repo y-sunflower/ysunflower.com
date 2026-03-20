@@ -62,10 +62,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-
-      <section style={{ paddingTop: "5rem" }}>
-        <Companies />
+        <div style={{ marginTop: "5rem" }}>
+          <Companies />
+        </div>
       </section>
 
       <div

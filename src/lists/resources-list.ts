@@ -15,14 +15,22 @@ export type ResourceProps = {
 
 export const resourcesList: ResourceProps[] = [
   {
-    resourceName: "python-package-template",
+    resourceName: "Typst in production",
+    resourceKind: "Guide",
+    resourceDescription:
+      "A practical guide to building, automating, and deploying PDFs with Typst.",
+    repositoryUrl: "https://github.com/y-sunflower/typst-in-production",
+    websiteUrl: "https://typst-in-production.com",
+  },
+  {
+    resourceName: "Python package template",
     resourceKind: "Template",
     resourceDescription:
       "Production-ready template for Python packages with tests, docs, releases, and CI/CD.",
     repositoryUrl: "https://github.com/y-sunflower/python-package-template",
   },
   {
-    resourceName: "quarto-parametrized-template-R",
+    resourceName: "Quarto parametrized template R",
     resourceKind: "Template",
     resourceDescription:
       "A Quarto template for parameterized report generation in R workflows.",
@@ -30,7 +38,7 @@ export const resourcesList: ResourceProps[] = [
       "https://github.com/y-sunflower/quarto-parametrized-template-R",
   },
   {
-    resourceName: "python-packaging-essentials",
+    resourceName: "Python packaging essentials",
     resourceKind: "Guide",
     resourceDescription:
       "Hands-on guide for creating, structuring, testing, and publishing Python packages.",
@@ -38,7 +46,7 @@ export const resourcesList: ResourceProps[] = [
     websiteUrl: "https://y-sunflower.github.io/python-packaging-essentials/",
   },
   {
-    resourceName: "python-dependency-explorer",
+    resourceName: "Python dependency explorer",
     resourceKind: "Tool",
     resourceDescription:
       "Website to inspect and verify dependency trees in Python packages to make sure of what you're installing.",
