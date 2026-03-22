@@ -1,8 +1,8 @@
 import { blogPostData as blogPostData1 } from "./introducing-yellow-sunflower/data";
 import BlogPost1Content from "./introducing-yellow-sunflower/page";
 
-import { blogPostData as blogPostData2 } from "./the-best-R-feature/data";
-import BlogPost2Content from "./the-best-R-feature/page";
+import { blogPostData as blogPostData2 } from "./announcing-tynding-R-package-typst/data";
+import BlogPost2Content from "./announcing-tynding-R-package-typst/page";
 
 export type BlogPost = {
   slug: string;

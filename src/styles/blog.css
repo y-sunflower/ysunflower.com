@@ -18,6 +18,8 @@
 .blog-post-container p {
   font-size: 1.3em;
   margin: 1em auto;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .blog-post-container h1 {
@@ -50,7 +52,9 @@
   border-radius: 10px;
   overflow: hidden;
   background: #fff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .blog-card:hover {
