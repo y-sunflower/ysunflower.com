@@ -98,10 +98,6 @@
     background-color 0.25s ease;
 }
 
-.flow-chip:hover {
-  transform: translateX(4px);
-}
-
 .flow-chip-accent {
   border-color: rgba(255, 195, 0, 0.55);
   background: rgba(255, 195, 0, 0.14);
@@ -152,14 +148,9 @@
 @keyframes dotFlow {
   0% {
     left: 0;
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
   }
   100% {
     left: calc(100%);
-    opacity: 0.7;
   }
 }
 

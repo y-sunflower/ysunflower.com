@@ -232,7 +232,6 @@ img.company-logo {
   width: 100%;
   height: auto;
   filter: grayscale(1);
-  transition: filter 0.3s ease;
 }
 
 .logo-item:hover img.company-logo,

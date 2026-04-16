@@ -38,13 +38,13 @@ const Header: React.FC = () => {
         <nav className={isMenuOpen ? "active" : ""}>
           <ul id="navMenu">
             <li>
-              <Link href="/open-source" onClick={closeMenu}>
-                open source
+              <Link href="/#consulting" onClick={closeMenu}>
+                consulting
               </Link>
             </li>
             <li>
-              <Link href="/#consulting" onClick={closeMenu}>
-                consulting
+              <Link href="/open-source" onClick={closeMenu}>
+                open source
               </Link>
             </li>
             <li>
