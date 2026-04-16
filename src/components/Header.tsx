@@ -20,6 +20,7 @@ const Header: React.FC = () => {
       <div className="container header-content">
         <Link href="/#" onClick={closeMenu}>
           <span className="name" style={{ fontSize: "1.5em" }}>
+            <img src="/logo.png" alt="Yellow sunflower logo" className="header-logo rotate" />
             <span className="highlight">yellow</span>{" "}
             <span className="highlight-secondary">sunflower</span>
           </span>

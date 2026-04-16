@@ -22,7 +22,22 @@
   text-decoration: none;
   color: var(--text-color);
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+
+.header-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-left: -10px;
+  margin-right: 0.8rem;
+}
+
+.name .highlight {
+  margin-right: 0.45rem;
 }
 
 .name::after {
@@ -173,6 +188,11 @@ nav a:hover::after {
 
   .name {
     font-size: 1.1em;
+  }
+
+  .header-logo {
+    width: 24px;
+    height: 24px;
   }
 
   nav {
