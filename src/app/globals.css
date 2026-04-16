@@ -355,6 +355,14 @@ img.rotate {
     font-size: 2rem;
   }
 
+  .opensource-text h2 {
+    font-size: 2rem;
+  }
+
+  .opensource-text p {
+    font-size: 1.2rem;
+  }
+
   .section-title p {
     font-size: 1.5rem;
   }
@@ -395,5 +403,9 @@ img.rotate {
 
   .logo-marquee {
     --logo-gap: 1.75rem;
+  }
+
+  li:not(nav li) {
+    font-size: 1rem;
   }
 }
