@@ -26,8 +26,8 @@ export default function DataPipeline() {
         <h2>
           <span className="bottom-line">
             <span className="name">
-              <span className="highlight">data</span>{" "}
-              <span className="highlight-secondary">consulting</span>
+              <span className="highlight">data-based</span>{" "}
+              <span className="highlight-secondary">reports</span>
             </span>
           </span>
         </h2>
