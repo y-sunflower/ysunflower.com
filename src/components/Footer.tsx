@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
           <div className="footer-col">
             <h3>Social</h3>
             <Link href="https://github.com/y-sunflower">Github</Link>
-            <Link href="https://www.linkedin.com/company/yellow-sunflower/">
+            <Link href="https://www.linkedin.com/in/joseph-barbier-4ab531224/">
               LinkedIn
             </Link>
             <Link href="https://www.youtube.com/@ysunflower-data">YouTube</Link>
