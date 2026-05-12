@@ -16,60 +16,60 @@ const BlogPost3Content = () => {
       </div>
       <p className="blog-description">{blogPostData.description}</p>
 
-      <h2>PDF with data</h2>
+      <h2>PDFs with data</h2>
       <p>
-        When we need to create PDF reports with data inside of it (charts,
+        When we need to create PDF reports that include data (charts,
         statistics, ...), we often use tools like:
       </p>
       <ul>
         <li>
-          <Link href="https://rmarkdown.rstudio.com/">RMarkdown</Link>: works
+          <Link href="https://rmarkdown.rstudio.com/">R Markdown</Link>: works
           mostly with the R programming language
         </li>
         <li>
           <Link href="https://quarto.org/">Quarto</Link>: a modern alternative
-          to Rmarkdown, with support for more languages
+          to R Markdown, with support for more languages
         </li>
       </ul>
       <p>
-        Those tools live in markdown-like documents that are then converted to
-        PDF using a specific engine. For a long time, people were using LaTeX
-        since it offers a solid PDF engine, but its syntax isn't very intuitive
-        and it's hard to do advanced customization.
+        Those tools work with markdown-like documents that are then converted to
+        PDF using a specific engine. For a long time, people used LaTeX because
+        it offers a solid PDF engine, but its syntax isn't very intuitive and
+        it's hard to do advanced customization.
       </p>
       <p>
         Then people from the web development world started using web
-        technologies (HTML & CSS) to create PDFs. The main pros of this is that
-        CSS (language used to style <b>every</b> website) is a tool meant for
-        styling content, from colors, to layout, shapes, etc, AND has "print"
-        features. We can use Chrome in headless mode (e.g., without opening the
-        Chrome Application) to take a screenshot of our pages, and we get a PDF
-        from a web page!
+        technologies (HTML & CSS) to create PDFs. The main benefit of this is
+        that CSS (the language used to style <b>every</b> website) is a tool
+        meant for styling content, from colors to layouts, shapes, etc., AND has
+        "print" features. We can use Chrome in headless mode (e.g., without
+        opening the Chrome application) to take a screenshot of our pages, and
+        we get a PDF from a web page!
       </p>
       <p>
-        Some tools also started to appear in order to make this process simpler,
-        in particular:{" "}
+        Some tools also started to appear to make this process simpler, in
+        particular:{" "}
         <Link href="https://github.com/rstudio/pagedown">pagedown</Link>.
       </p>
 
       <h2>Pagedown and PDFs</h2>
       <p>
-        Pagedown is "just" an R wrapper of{" "}
+        Pagedown is "just" an R wrapper around{" "}
         <Link href="https://pagedjs.org/">paged.js</Link>, a JavaScript library
-        which does the HTML/CSS to PDF conversion under the hood. It's mostly
-        meant to be used within RMarkdown.
+        that does the HTML/CSS to PDF conversion under the hood. It's mostly
+        meant to be used within R Markdown.
       </p>
       <p>
         <b>Pagedown works very well</b>: you'll be able to create very complex
-        PDFs, automate what needs to be automate, and it feels like a robust
+        PDFs, automate what needs to be automated, and it feels like a robust
         tool. The thing is, you often need to write lots of CSS or even
         sometimes JavaScript, which isn't fun or easy, even with the help of AI
         since this field is quite niche.
       </p>
       <p>
         I have created Pagedown templates with hundreds, if not more, lines of
-        CSS/JavaScript. It works, but fixing bug becomes complex as the codebase
-        grow, and it's hella slow.
+        CSS/JavaScript. It works, but fixing bugs becomes complex as the
+        codebase grows, and it's hella slow.
       </p>
       <p>
         Then I started hearing about{" "}
@@ -84,19 +84,19 @@ const BlogPost3Content = () => {
       </h2>
       <p>
         Typst is amazing. It's a tool that is really modern, built for humans,
-        with a great focus on syntax readability, opiniated choices and amazing
-        performances.
+        with a great focus on syntax readability, opinionated choices and
+        amazing performance.
       </p>
       <p>
-        Like any other tool you need to learn how to use it, but this one really
-        feels intuitive once you start using it, especially compared to CSS that
-        stays hard even with hours spent using it.
+        Like any other tool, you need to learn how to use it, but this one
+        really feels intuitive once you start using it, especially compared to
+        CSS, which stays hard even after hours spent using it.
       </p>
       <br />
       <h3>Typst integration</h3>
       <p>
         The simplest way to go from Pagedown to Typst is to use it with Quarto
-        and specify the typst format:
+        and specify the Typst format:
       </p>
       <CodeBlock lang="quarto">{`
 ---
@@ -106,16 +106,16 @@ format: typst
       `}</CodeBlock>
       <p>
         And now Quarto will automatically use Typst to create your PDF! The
-        default template isn't really good looking, but Quarto has great
-        features for Typst that let you define custom and reusable templates,
-        and you write Typst code directly.
+        default template isn't really good-looking, but Quarto has great
+        features for Typst that let you define custom, reusable templates and
+        write Typst code directly.
       </p>
       <br />
       <h3>Typst syntax</h3>
       <p>
         Typst can feel weird at first because it's a markup language (e.g.,
-        markdown, HTML, etc) with scripting features (think <code>if</code>/
-        <code>else</code> statements, functions, <code>for</code> loops, etc).
+        markdown, HTML, etc.) with scripting features (think <code>if</code>/
+        <code>else</code> statements, functions, <code>for</code> loops, etc.).
         Take a moment and try to understand the following code:
       </p>
       <CodeBlock lang="typst">{`
@@ -143,8 +143,8 @@ format: typst
       <h3>Typst performance</h3>
       <p>
         Typst is fast, <i>really</i> fast. When you compare it to pagedown, you
-        get something between 5x to 15x faster, depending on whether you use
-        Quarto with Typst, or Typst directly. This adds up quickly as soon as
+        get something between 5x and 15x faster, depending on whether you use
+        Quarto with Typst or Typst directly. This adds up quickly as soon as
         you try to automate your PDF generation and/or make a lot of iterations
         on your project.
       </p>
@@ -163,15 +163,15 @@ format: typst
 
       <h2>Sooo, should you migrate to Typst?</h2>
       <p>
-        The answer is probably yes, but this requires some nuances. If you like
+        The answer is probably yes, but this requires some nuance. If you like
         pagedown and if it works for you, then keep using it! No need to fix a
         problem that doesn't exist.
       </p>
       <p>
-        On the other side, if your PDF generation feels slow, you feel limited
+        On the other hand, if your PDF generation feels slow, you feel limited
         by what you're able to do and want to use more modern solutions, then it
-        might a good time to investigate what Typst can do for you. It's
-        unlikely that you find something Typst <b>can't</b> do, and even more
+        might be a good time to investigate what Typst can do for you. It's
+        unlikely that you'll find something Typst <b>can't</b> do, and even more
         unlikely that you ever want to go back. Once you start using Typst, you
         don't want to stop.
       </p>
@@ -180,12 +180,13 @@ format: typst
         Typst and R <i>without</i> Quarto
       </h2>
       <p>
-        Note you can also, and easily, use Typst from R without using Quarto.
+        Note that you can also easily use Typst from R without using Quarto.
         This is possible thanks to{" "}
         <Link href="https://github.com/y-sunflower/tynding">tynding</Link>, an R
         package that lets you create your PDFs from R. This also means that
-        you'll need to know Typst and lose some Quarto features. You can learn
-        more <Link href="https://github.com/y-sunflower/tynding">here</Link>.
+        you'll need to know Typst, and you'll lose some Quarto features. You can
+        learn more{" "}
+        <Link href="https://github.com/y-sunflower/tynding">here</Link>.
       </p>
 
       <h2>Going further</h2>

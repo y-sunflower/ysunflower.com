@@ -107,6 +107,7 @@ const BlogPost1Content = () => {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <img
           src="/logo.png"
+          alt="Yellow Sunflower logo"
           style={{ maxWidth: "20%", height: "auto" }}
           className="rotate"
         />
