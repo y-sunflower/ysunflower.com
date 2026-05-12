@@ -1,4 +1,5 @@
 import "../../../styles/blog.css";
+import Link from "next/link";
 import { blogPostData } from "./data";
 import CodeBlock from "../../../components/CodeBlock";
 
@@ -21,10 +22,13 @@ const BlogPost3Content = () => {
         statistics, ...), we often use tools like:
       </p>
       <ul>
-        <li>RMarkdown: works mostly with the R programming language</li>
         <li>
-          Quarto: a modern alternative to Rmarkdown, with support for more
-          languages
+          <Link href="https://rmarkdown.rstudio.com/">RMarkdown</Link>: works
+          mostly with the R programming language
+        </li>
+        <li>
+          <Link href="https://quarto.org/">Quarto</Link>: a modern alternative
+          to Rmarkdown, with support for more languages
         </li>
       </ul>
       <p>
@@ -44,14 +48,16 @@ const BlogPost3Content = () => {
       </p>
       <p>
         Some tools also started to appear in order to make this process simpler,
-        in particular: Pagedown.
+        in particular:{" "}
+        <Link href="https://github.com/rstudio/pagedown">pagedown</Link>.
       </p>
 
       <h2>Pagedown and PDFs</h2>
       <p>
-        Pagedown is "just" an R wrapper of paged.js, a JavaScript library which
-        does the HTML/CSS to PDF conversion under the hood. It's mostly meant to
-        be used within RMarkdown.
+        Pagedown is "just" an R wrapper of{" "}
+        <Link href="https://pagedjs.org/">paged.js</Link>, a JavaScript library
+        which does the HTML/CSS to PDF conversion under the hood. It's mostly
+        meant to be used within RMarkdown.
       </p>
       <p>
         <b>Pagedown works very well</b>: you'll be able to create very complex
@@ -66,12 +72,16 @@ const BlogPost3Content = () => {
         grow, and it's hella slow.
       </p>
       <p>
-        Then I started hearing about Typst, a language designed just to create
-        PDFs. And many people are saying it's really good, so I decided to give
-        it a try.
+        Then I started hearing about{" "}
+        <Link href="https://typst.app/home">Typst</Link>, a language designed
+        just to create PDFs. And many people are saying it's really good, so I
+        decided to give it a try.
       </p>
 
-      <h2>Typst: a new way to create PDFs</h2>
+      <h2>
+        <Link href="https://typst.app/home">Typst</Link>: a new way to create
+        PDFs
+      </h2>
       <p>
         Typst is amazing. It's a tool that is really modern, built for humans,
         with a great focus on syntax readability, opiniated choices and amazing
@@ -95,9 +105,10 @@ format: typst
 ---
       `}</CodeBlock>
       <p>
-        And now your PDF engine will automatically use Typst! The default
-        template isn't really good looking, but Quarto has great features for
-        Typst that let you define custom and reusable templates.
+        And now Quarto will automatically use Typst to create your PDF! The
+        default template isn't really good looking, but Quarto has great
+        features for Typst that let you define custom and reusable templates,
+        and you write Typst code directly.
       </p>
       <br />
       <h3>Typst syntax</h3>
@@ -105,6 +116,7 @@ format: typst
         Typst can feel weird at first because it's a markup language (e.g.,
         markdown, HTML, etc) with scripting features (think <code>if</code>/
         <code>else</code> statements, functions, <code>for</code> loops, etc).
+        Take a moment and try to understand the following code:
       </p>
       <CodeBlock lang="typst">{`
 #let my-component(lab, col) = { // function definition
@@ -130,25 +142,70 @@ format: typst
       <br />
       <h3>Typst performance</h3>
       <p>
-        Typst is fast, really fast. And this becomes even more true when you
-        compare it to Pagedown.
+        Typst is fast, <i>really</i> fast. When you compare it to pagedown, you
+        get something between 5x to 15x faster, depending on whether you use
+        Quarto with Typst, or Typst directly. This adds up quickly as soon as
+        you try to automate your PDF generation and/or make a lot of iterations
+        on your project.
+      </p>
+      <img
+        src={"/blog/pagedown-typst-benchmark.png"}
+        alt="Bar chart comparing PDF rendering times for a 12-page document using three tools: pagedown, Quarto + Typst, and Typst alone. Two grouped comparisons are shown: mean rendering time and median rendering time, each based on 15 runs. For the mean times, pagedown takes 5.9 seconds, Quarto + Typst takes 1.2 seconds, and Typst takes 0.36 seconds. For the median times, pagedown takes 5.8 seconds, Quarto + Typst takes 1.2 seconds, and Typst takes 0.35 seconds. The chart subtitle states that Typst is on average 16.5 times faster than pagedown, while Quarto + Typst is 4.9 times faster than pagedown. It also notes that Typst skips Quarto’s pandoc step by using the bare CLI directly, while Quarto + Typst still uses the Typst engine through Quarto. Pagedown bars are dark red, Quarto + Typst bars are teal, and Typst bars are dark blue. The y-axis ranges from 0 to 6 seconds."
+        style={{ border: "1px solid #ccc", borderRadius: "8px", width: "100%" }}
+      />
+      <p>
+        You can find the code for this benchmark{" "}
+        <Link href="https://github.com/JosephBARBIERDARNAL/pagedown-typst-benchmark">
+          here
+        </Link>
+        .
       </p>
 
-      <h2>Typst and R without Quarto</h2>
+      <h2>Sooo, should you migrate to Typst?</h2>
+      <p>
+        The answer is probably yes, but this requires some nuances. If you like
+        pagedown and if it works for you, then keep using it! No need to fix a
+        problem that doesn't exist.
+      </p>
+      <p>
+        On the other side, if your PDF generation feels slow, you feel limited
+        by what you're able to do and want to use more modern solutions, then it
+        might a good time to investigate what Typst can do for you. It's
+        unlikely that you find something Typst <b>can't</b> do, and even more
+        unlikely that you ever want to go back. Once you start using Typst, you
+        don't want to stop.
+      </p>
+
+      <h2>
+        Typst and R <i>without</i> Quarto
+      </h2>
       <p>
         Note you can also, and easily, use Typst from R without using Quarto.
-        This is possible thanks to tynding, an R package that lets you create
-        your PDFs from R.
+        This is possible thanks to{" "}
+        <Link href="https://github.com/y-sunflower/tynding">tynding</Link>, an R
+        package that lets you create your PDFs from R. This also means that
+        you'll need to know Typst and lose some Quarto features. You can learn
+        more <Link href="https://github.com/y-sunflower/tynding">here</Link>.
       </p>
-      <p>You can learn more here.</p>
 
       <h2>Going further</h2>
       <ul>
         <li>
-          Typst in production: learn Typst, how it integrates with other tools,
-          etc
+          <Link href="https://typst-in-production.com/">
+            Typst in production
+          </Link>
+          : a guide on how to use Typst, from learning the basic principles to
+          more advanced concepts such as templating, automation or
+          accessibility.
         </li>
-        <li>Contact us for consulting/training</li>
+        <li>
+          <Link href="https://quarto.org/docs/output-formats/typst.html">
+            Quarto and Typst
+          </Link>
+        </li>
+        <li>
+          <Link href="/#contact">Contact us</Link> for consulting/training.
+        </li>
       </ul>
     </div>
   );

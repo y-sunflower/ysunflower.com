@@ -5,5 +5,5 @@ export const blogPostData = {
   image: "/blog/pagedown.svg",
   readingTime: "4 min",
   date: "May 2026",
-  isAvailable: false,
+  isAvailable: true,
 };
