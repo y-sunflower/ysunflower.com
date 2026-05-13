@@ -119,6 +119,17 @@ const BlogPost1Content = () => {
 export const metadata = {
   title: blogPostData.title,
   description: blogPostData.description,
+  openGraph: {
+    title: blogPostData.title,
+    description: blogPostData.description,
+    images: [blogPostData.image],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: blogPostData.title,
+    description: blogPostData.description,
+    images: [blogPostData.image],
+  },
 };
 
 export default BlogPost1Content;

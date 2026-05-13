@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ysunflower.com"),
   title: "yellow sunflower",
   description:
     "Data consulting for reproducible reporting and automation, with open-source tools for modern data workflows",
