@@ -2,6 +2,7 @@ import "../../../styles/blog.css";
 import Link from "next/link";
 import { blogPostData } from "./data";
 import CodeBlock from "../../../components/CodeBlock";
+import Quote from "../../../components/Quote";
 
 const BlogPost3Content = () => {
   return (
@@ -15,6 +16,13 @@ const BlogPost3Content = () => {
         <p>{blogPostData.readingTime}</p>
       </div>
       <p className="blog-description">{blogPostData.description}</p>
+
+      <br />
+      <Quote
+        description="I'm blown away by the compilation speed and how easy it is to work with! I wish Typst existed 3 years ago when we were building out our other reports [...] and when I was writing my PhD thesis."
+        author="Ben Butler, Co-founder & CSO at Soil Benchmark"
+        author_link="https://www.soilbenchmark.com/about"
+      />
 
       <h2>PDFs with data</h2>
       <p>
@@ -144,9 +152,9 @@ format: typst
       <p>
         Typst is fast, <i>really</i> fast. When you compare it to pagedown, you
         get something between 5x and 15x faster, depending on whether you use
-        Quarto with Typst or Typst directly. This adds up quickly as soon as
-        you try to automate your PDF generation and/or make a lot of iterations
-        on your project.
+        Quarto with Typst or Typst directly. This adds up quickly as soon as you
+        try to automate your PDF generation and/or make a lot of iterations on
+        your project.
       </p>
       <img
         src={"/blog/pagedown-typst-benchmark.png"}
@@ -169,11 +177,45 @@ format: typst
       </p>
       <p>
         On the other hand, if your PDF generation feels slow, you feel limited
-        by what you're able to do and want to use more modern solutions, then it
-        might be a good time to investigate what Typst can do for you. It's
-        unlikely that you'll find something Typst <b>can't</b> do, and even more
-        unlikely that you ever want to go back. Once you start using Typst, you
-        don't want to stop.
+        by what you're able to do, and you want to use more modern solutions,
+        then it might be a good time to investigate what Typst can do for you.
+        It's unlikely that you'll find something Typst <b>can't</b> do, and even
+        more unlikely that you'll ever want to go back. Once you start using
+        Typst, you don't want to stop.
+      </p>
+
+      <h2>How to migrate?</h2>
+      <p>
+        This blog post isn't meant to provide an end-to-end solution on how to
+        migrate, but rather give you hints on which direction to go.
+      </p>
+      <ul>
+        <li>
+          Use Quarto instead of Rmarkdown: the first step is to rename your{" "}
+          <b>.Rmd</b> files to <b>.qmd</b>.
+        </li>
+        <li>
+          Swap the output format in your YAML header from{" "}
+          <code>pagedown::html_paged()</code> to <code>format: typst</code>.
+        </li>
+        <li>
+          Drop your CSS files: Typst handles styling natively, so most of your
+          custom CSS becomes unnecessary (and what's left can be rewritten as a
+          Typst template).
+        </li>
+        <li>
+          Translate your custom components: anything you built with HTML/CSS
+          (headers, footers, cards, etc.) needs to be rewritten as Typst
+          functions. The good news is that it's usually much shorter.
+        </li>
+        <li>
+          Keep your R code chunks as they are: Quarto runs them the same way,
+          regardless of the output format.
+        </li>
+      </ul>
+      <p>
+        Each step here can take more or less time, and be more or less complex.
+        Migrating a complex pagedown template isn't a one-hour thing!
       </p>
 
       <h2>
@@ -203,6 +245,7 @@ format: typst
           <Link href="https://quarto.org/docs/output-formats/typst.html">
             Quarto and Typst
           </Link>
+          : an introduction on how to use Typst in Quarto.
         </li>
         <li>
           <Link href="/#contact">Contact us</Link> for consulting/training.
