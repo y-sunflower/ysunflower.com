@@ -17,12 +17,13 @@ const BlogPost3Content = () => {
       </div>
       <p className="blog-description">{blogPostData.description}</p>
 
-      <br />
-      <Quote
-        description="I'm blown away by the compilation speed and how easy it is to work with! I wish Typst existed 3 years ago when we were building out our other reports [...] and when I was writing my PhD thesis."
-        author="Ben Butler, Co-founder & CSO at Soil Benchmark"
-        author_link="https://www.soilbenchmark.com/about"
-      />
+      <p>
+        Pagedown has been a go-to tool for generating PDF reports from R, but it
+        comes with some friction such as slow compilation, sprawling CSS, and
+        bugs that get harder to fix as templates grow. This post is about why
+        Typst is a compelling alternative, and what a migration from pagedown
+        looks like in practice.
+      </p>
 
       <h2>PDFs with data</h2>
       <p>
@@ -68,16 +69,17 @@ const BlogPost3Content = () => {
         meant to be used within R Markdown.
       </p>
       <p>
-        <b>Pagedown works very well</b>: you'll be able to create very complex
-        PDFs, automate what needs to be automated, and it feels like a robust
-        tool. The thing is, you often need to write lots of CSS or even
-        sometimes JavaScript, which isn't fun or easy, even with the help of AI
-        since this field is quite niche.
+        <b>Pagedown works very well</b>: you can create very complex PDFs,
+        automate what needs to be automated, and it feels like a robust tool.
+        The catch is that you often need to write lots of CSS, or even sometimes
+        JavaScript, which isn't fun or easy, even with the help of AI since this
+        field is quite niche.
       </p>
       <p>
-        I have created Pagedown templates with hundreds, if not more, lines of
-        CSS/JavaScript. It works, but fixing bugs becomes complex as the
-        codebase grows, and it's hella slow.
+        And the more advanced the template, the more this hurts. I've built
+        Pagedown templates with hundreds, if not more, lines of CSS/JavaScript:
+        they work, but at that scale fixing bugs becomes complex, and
+        compilation gets hella slow.
       </p>
       <p>
         Then I started hearing about{" "}
@@ -85,6 +87,11 @@ const BlogPost3Content = () => {
         just to create PDFs. And many people are saying it's really good, so I
         decided to give it a try.
       </p>
+      <Quote
+        description="I'm blown away by the compilation speed and how easy it is to work with! I wish Typst existed 3 years ago when we were building out our other reports [...] and when I was writing my PhD thesis."
+        author="Ben Butler, Co-founder & CSO at Soil Benchmark"
+        author_link="https://www.soilbenchmark.com/about"
+      />
 
       <h2>
         <Link href="https://typst.app/home">Typst</Link>: a new way to create
@@ -172,8 +179,8 @@ format: typst
       <h2>Sooo, should you migrate to Typst?</h2>
       <p>
         The answer is probably yes, but this requires some nuance. If you like
-        pagedown and if it works for you, then keep using it! No need to fix a
-        problem that doesn't exist.
+        pagedown and if it works for you, then keep using it!{" "}
+        <b>No need to fix a problem that doesn't exist</b>.
       </p>
       <p>
         On the other hand, if your PDF generation feels slow, you feel limited
