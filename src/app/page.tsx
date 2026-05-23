@@ -35,9 +35,9 @@ export default function Home() {
               </span>
             </h2>
             <p>
-              We have collaborated with research labs, nonprofits, education
-              organizations, and private companies on data communication and
-              reporting workflows.
+              We help research, analytics, and data teams automate the
+              production of high-quality reports, dashboards, and technical
+              documents.
             </p>
           </div>
         </div>
@@ -60,8 +60,9 @@ export default function Home() {
               </h2>
               <p className="intro-text">
                 Tell us about your data sources, reporting goals, and current
-                workflow. We can help you design a reproducible pipeline and
-                deliver clean PDF or web dashboards.
+                workflow. We design reproducible reporting systems that
+                transform raw data into automated dashboards, branded PDFs, and
+                publication-grade documents.
               </p>
               <p>
                 <a href="mailto:joseph@ysunflower.com">joseph@ysunflower.com</a>

@@ -10,7 +10,6 @@ const dataInputs = [
 const modernTools = [
   "Python and R pipelines",
   "Quarto and Typst templates",
-  "Versioned workflows",
   "Scheduled automations",
 ];
 const reportOutputs = [
@@ -26,8 +25,8 @@ export default function DataPipeline() {
         <h2>
           <span className="bottom-line">
             <span className="name">
-              <span className="highlight">data-based</span>{" "}
-              <span className="highlight-secondary">reports</span>
+              <span className="highlight">automated</span>{" "}
+              <span className="highlight-secondary">reporting system</span>
             </span>
           </span>
         </h2>
@@ -35,7 +34,7 @@ export default function DataPipeline() {
           From manual spreadsheets to automated reporting systems, we design
           workflows that are visual, reproducible, and easy to maintain. We help
           teams turn disconnected spreadsheets, CSV files, and operational data
-          into reports people can trust and act on.
+          into <b>reports people can trust and act on</b>.
         </p>
       </div>
 
@@ -60,7 +59,7 @@ export default function DataPipeline() {
 
           <article className="flow-node flow-node-tools">
             <p className="flow-kicker">TRANSFORM</p>
-            <h3>Modern tools</h3>
+            <h3>Automated workflows</h3>
             <div className="flow-chip-list">
               {modernTools.map((tool) => (
                 <span className="flow-chip flow-chip-accent" key={tool}>
@@ -90,8 +89,8 @@ export default function DataPipeline() {
 
         <div className="flow-caption">
           <p>
-            A single flow from fragmented data to reproducible outputs your team
-            can trust.
+            Transform fragmented data into automated, reproducible reports your
+            team can trust.
           </p>
         </div>
       </div>
