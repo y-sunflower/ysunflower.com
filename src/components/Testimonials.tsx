@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useCallback, useEffect, useState } from "react";
 import "../styles/testimonials.css";
 
 type ImagePosition = "left" | "right";
@@ -56,33 +59,69 @@ const testimonials: Testimonial[] = [
 ];
 
 export default function Testimonials() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const showPrevious = useCallback(() => {
+    setActiveIndex((current) =>
+      current === 0 ? testimonials.length - 1 : current - 1,
+    );
+  }, []);
+
+  const showNext = useCallback(() => {
+    setActiveIndex((current) => (current + 1) % testimonials.length);
+  }, []);
+
+  useEffect(() => {
+    const interval = window.setInterval(showNext, 3000);
+    return () => window.clearInterval(interval);
+  }, [showNext]);
+
+  const testimonial = testimonials[activeIndex];
+
   return (
-    <div className="testimonials">
-      {testimonials.map((t, idx) => (
-        <div
-          key={idx}
-          className={`testimonial testimonial--image-${t.imagePosition ?? "left"}`}
-        >
-          <a href={t.link} target="_blank" rel="noopener noreferrer">
-            <Image
-              src={t.img}
-              alt={t.name}
-              width={120}
-              height={120}
-              className="testimonial-img"
-            />
+    <div className="testimonials" aria-live="polite">
+      <div
+        className={`testimonial testimonial--image-${testimonial.imagePosition ?? "left"}`}
+      >
+        <a href={testimonial.link} target="_blank" rel="noopener noreferrer">
+          <Image
+            src={testimonial.img}
+            alt={testimonial.name}
+            width={120}
+            height={120}
+            className="testimonial-img"
+          />
+        </a>
+        <div className="testimonial-content">
+          <a href={testimonial.link} target="_blank" rel="noopener noreferrer">
+            <div className="testimonial-name">{testimonial.name}</div>
           </a>
-          <div className="testimonial-content">
-            <a href={t.link} target="_blank" rel="noopener noreferrer">
-              <div className="testimonial-name">{t.name}</div>
-            </a>
-            <div className="testimonial-job">{t.job}</div>
-            {t.texts.map((text, i) => (
-              <p key={i}>{text}</p>
-            ))}
-          </div>
+          <div className="testimonial-job">{testimonial.job}</div>
+          {testimonial.texts.map((text) => (
+            <p key={text}>{text}</p>
+          ))}
         </div>
-      ))}
+      </div>
+
+      <div className="testimonial-controls">
+        <button
+          type="button"
+          onClick={showPrevious}
+          aria-label="Previous testimonial"
+        >
+          &#8592;
+        </button>
+        <span aria-hidden="true">
+          {activeIndex + 1} / {testimonials.length}
+        </span>
+        <button
+          type="button"
+          onClick={showNext}
+          aria-label="Next testimonial"
+        >
+          &#8594;
+        </button>
+      </div>
     </div>
   );
 }

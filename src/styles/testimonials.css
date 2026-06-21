@@ -1,8 +1,8 @@
 .testimonials {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin: 2rem 0;
+  gap: 1rem;
+  margin: 2.5rem 0 0;
 }
 
 .testimonial {
@@ -15,6 +15,7 @@
   border-radius: 8px;
   background-color: #fafafa;
   transition: all 0.3s ease;
+  min-height: 250px;
 }
 
 .testimonial--image-right {
@@ -51,49 +52,48 @@
   font-style: oblique;
 }
 
-.joseph-image img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  object-fit: cover;
+.home-testimonials {
+  padding: 5rem 0 10rem;
 }
 
-.image-computer img {
-  border-radius: 3%;
-  width: 350px;
-  max-width: 400px;
+.testimonials-container {
+  max-width: 1000px;
 }
 
-.about-content {
+.testimonials-container h2 {
+  font-size: 3rem;
+}
+
+.testimonial-controls {
   display: flex;
   align-items: center;
-  gap: 4rem;
+  justify-content: center;
+  gap: 0.75rem;
 }
 
-.about-text {
-  flex: 1;
+.testimonial-controls button {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba(90, 24, 154, 0.3);
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--secondary-color);
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-.about-text h2 {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  position: relative;
+.testimonial-controls button:hover,
+.testimonial-controls button:focus-visible {
+  background: var(--light-primary);
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
 }
 
-.about {
-  padding-top: 6rem;
-  background-color: var(--light);
-}
-
-.about-text p {
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  font-size: 1.2rem;
-  color: var(--text-color);
-}
-
-.about-tools p {
-  font-size: 1.4rem;
+.testimonial-controls span {
+  min-width: 2.5rem;
+  color: #6a6969;
+  font-size: 0.85rem;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -101,6 +101,10 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .testimonials-container h2 {
+    font-size: 2rem;
   }
 
   .testimonial img {
@@ -111,22 +115,4 @@
     width: 100%;
   }
 
-  .joseph-image img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .about-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  .about-text h2 {
-    font-size: 2rem;
-  }
-
-  .about-text p {
-    font-size: 1rem;
-  }
 }

@@ -1,45 +1,26 @@
 import Hero from "../components/Hero";
+import Testimonials from "../components/Testimonials";
 import { ContactForm } from "../components/Form";
 import Companies from "../components/Companies";
-import PushButton from "../components/Button";
-import DataPipeline from "../components/DataPipeline";
 
 export default function Home() {
   return (
     <>
       <Hero />
-
-      <div id="consulting" style={{ marginTop: "12rem" }}></div>
-
-      <section>
-        <DataPipeline />
-      </section>
-
-      <div className="button-variant consulting-cta-row">
-        <PushButton
-          text={"Discuss your project"}
-          link={"/#contact"}
-          fontSize="1.1em"
-        />
-      </div>
-
-      <section style={{ marginTop: "8rem" }}>
-        <div className="container">
-          <div className="opensource-text consulting-focus">
-            <h2>
-              <span className="bottom-line">
-                <span className="name">
-                  <span className="highlight">trusted</span>{" "}
-                  <span className="highlight-secondary">by teams</span>
-                </span>
+      <section
+        className="home-testimonials"
+        aria-labelledby="testimonials-title"
+      >
+        <div className="container testimonials-container">
+          <h2 id="testimonials-title">
+            <span className="bottom-line">
+              <span className="name">
+                <span className="highlight">trusted</span>{" "}
+                <span className="highlight-secondary">in practice</span>
               </span>
-            </h2>
-            <p>
-              We help research, analytics, and data teams automate the
-              production of high-quality reports, dashboards, and technical
-              documents.
-            </p>
-          </div>
+            </span>
+          </h2>
+          <Testimonials />
         </div>
         <Companies />
       </section>
