@@ -2,7 +2,6 @@
 
 import PushButton from "./Button";
 import DataPipeline from "./DataPipeline";
-import Link from "next/link";
 import "../styles/hero.css";
 
 export default function Hero() {
@@ -18,16 +17,6 @@ export default function Hero() {
         </div>
 
         <DataPipeline />
-
-        <div className="container hero-proof">
-          <p>
-            We are the developers behind open-source data tools used by people
-            around the world, with <strong>800k+ downloads</strong> across our
-            most-used Python/R packages. We bring that practical experience to
-            every client system we build.
-          </p>
-          <Link href="/open-source">Explore our open-source work</Link>
-        </div>
 
         <div className="button-variant hero-cta">
           <PushButton

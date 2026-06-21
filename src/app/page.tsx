@@ -2,6 +2,7 @@ import Hero from "../components/Hero";
 import Testimonials from "../components/Testimonials";
 import { ContactForm } from "../components/Form";
 import Companies from "../components/Companies";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -20,6 +21,15 @@ export default function Home() {
               </span>
             </span>
           </h2>
+          <div className="trusted-proof">
+            <p>
+              We are the developers behind open-source data tools used by people
+              around the world, with <strong>800k+ downloads</strong> across our
+              most-used Python/R packages. We bring that practical experience to
+              every client system we build.{" "}
+              <Link href="/open-source">Explore our open-source work</Link>.
+            </p>
+          </div>
           <Testimonials />
         </div>
         <Companies />

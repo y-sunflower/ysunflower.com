@@ -97,6 +97,18 @@
   font-size: 3rem;
 }
 
+.trusted-proof {
+  margin-top: 2rem;
+}
+
+.trusted-proof p {
+  width: 100%;
+  max-width: none;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
 .testimonial-controls {
   display: flex;
   align-items: center;
@@ -140,7 +152,6 @@
   .testimonial-content {
     width: 100%;
   }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
