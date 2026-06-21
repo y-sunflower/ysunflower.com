@@ -60,14 +60,17 @@ const testimonials: Testimonial[] = [
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [direction, setDirection] = useState<"next" | "previous">("next");
 
   const showPrevious = useCallback(() => {
+    setDirection("previous");
     setActiveIndex((current) =>
       current === 0 ? testimonials.length - 1 : current - 1,
     );
   }, []);
 
   const showNext = useCallback(() => {
+    setDirection("next");
     setActiveIndex((current) => (current + 1) % testimonials.length);
   }, []);
 
@@ -81,7 +84,8 @@ export default function Testimonials() {
   return (
     <div className="testimonials" aria-live="polite">
       <div
-        className={`testimonial testimonial--image-${testimonial.imagePosition ?? "left"}`}
+        key={activeIndex}
+        className={`testimonial testimonial--slide-${direction} testimonial--image-${testimonial.imagePosition ?? "left"}`}
       >
         <a href={testimonial.link} target="_blank" rel="noopener noreferrer">
           <Image
@@ -111,9 +115,6 @@ export default function Testimonials() {
         >
           &#8592;
         </button>
-        <span aria-hidden="true">
-          {activeIndex + 1} / {testimonials.length}
-        </span>
         <button
           type="button"
           onClick={showNext}
