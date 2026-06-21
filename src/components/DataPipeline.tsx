@@ -22,14 +22,6 @@ export default function DataPipeline() {
   return (
     <div className="container">
       <div className="opensource-text">
-        <h2>
-          <span className="bottom-line">
-            <span className="name">
-              <span className="highlight">automated</span>{" "}
-              <span className="highlight-secondary">reporting system</span>
-            </span>
-          </span>
-        </h2>
         <p>
           From manual spreadsheets to automated reporting systems, we design
           workflows that are visual, reproducible, and easy to maintain. We help
@@ -85,13 +77,6 @@ export default function DataPipeline() {
               ))}
             </div>
           </article>
-        </div>
-
-        <div className="flow-caption">
-          <p>
-            Transform fragmented data into automated, reproducible reports your
-            team can trust.
-          </p>
         </div>
       </div>
     </div>

@@ -1,45 +1,36 @@
 import Hero from "../components/Hero";
+import Testimonials from "../components/Testimonials";
 import { ContactForm } from "../components/Form";
 import Companies from "../components/Companies";
-import PushButton from "../components/Button";
-import DataPipeline from "../components/DataPipeline";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
       <Hero />
-
-      <div id="consulting" style={{ marginTop: "12rem" }}></div>
-
-      <section>
-        <DataPipeline />
-      </section>
-
-      <div className="button-variant consulting-cta-row">
-        <PushButton
-          text={"Discuss your project"}
-          link={"/#contact"}
-          fontSize="1.1em"
-        />
-      </div>
-
-      <section style={{ marginTop: "8rem" }}>
-        <div className="container">
-          <div className="opensource-text consulting-focus">
-            <h2>
-              <span className="bottom-line">
-                <span className="name">
-                  <span className="highlight">trusted</span>{" "}
-                  <span className="highlight-secondary">by teams</span>
-                </span>
+      <section
+        className="home-testimonials"
+        aria-labelledby="testimonials-title"
+      >
+        <div className="container testimonials-container">
+          <h2 id="testimonials-title">
+            <span className="bottom-line">
+              <span className="name">
+                <span className="highlight">trusted</span>{" "}
+                <span className="highlight-secondary">in practice</span>
               </span>
-            </h2>
+            </span>
+          </h2>
+          <div className="trusted-proof">
             <p>
-              We help research, analytics, and data teams automate the
-              production of high-quality reports, dashboards, and technical
-              documents.
+              We are the developers behind open-source data tools used by people
+              around the world, with <strong>800k+ downloads</strong> across our
+              most-used Python/R packages. We bring that practical experience to
+              every client system we build.{" "}
+              <Link href="/open-source">Explore our open-source work</Link>.
             </p>
           </div>
+          <Testimonials />
         </div>
         <Companies />
       </section>

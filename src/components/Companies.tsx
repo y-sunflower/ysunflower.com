@@ -74,7 +74,10 @@ export default function Companies() {
     },
   ];
 
-  const renderCompany = (company: (typeof companies)[number], duplicate = false) => (
+  const renderCompany = (
+    company: (typeof companies)[number],
+    duplicate = false,
+  ) => (
     <a
       key={`${company.href}-${duplicate ? "duplicate" : "primary"}`}
       className="logo-item"
@@ -105,7 +108,7 @@ export default function Companies() {
           {companies.map((company) => renderCompany(company))}
         </div>
         <div className="logo-group" aria-hidden="true">
-          {companies.map((company) => renderCompany(company, true))}
+          {companies.map((company) => renderCompany(company))}
         </div>
       </div>
     </div>

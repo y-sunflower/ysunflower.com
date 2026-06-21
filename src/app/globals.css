@@ -202,10 +202,6 @@ li:not(nav li) {
   animation: logoMarquee var(--logo-duration) linear infinite;
 }
 
-.logo-marquee:hover .logo-track {
-  animation-play-state: paused;
-}
-
 .logo-group {
   display: flex;
   align-items: center;

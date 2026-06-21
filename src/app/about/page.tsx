@@ -1,6 +1,6 @@
 import Companies from "../../components/Companies";
-import Testimonials from "../../components/Testimonials";
 import Link from "next/link";
+import "../../styles/about.css";
 
 export default function Home() {
   return (
@@ -66,24 +66,6 @@ export default function Home() {
           <Companies />
         </div>
       </section>
-
-      <div
-        className="container"
-        style={{ marginTop: "10rem", maxWidth: "1000px" }}
-      >
-        <div className="about-text">
-          <h2>
-            <span style={{ display: "inline-block" }} className="bottom-line">
-              <span className="name">
-                <span className="highlight">some</span>{" "}
-                <span className="highlight-secondary">testimonials</span>
-              </span>
-            </span>
-          </h2>
-        </div>
-
-        <Testimonials />
-      </div>
 
       <div
         className="container"

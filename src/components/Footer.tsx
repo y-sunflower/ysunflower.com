@@ -38,6 +38,7 @@ const Footer: React.FC = () => {
             <h3>Terms & Policies</h3>
             <Link href="/legal">Legal</Link>
             <Link href="/about">About</Link>
+            <Link href="/#contact">Contact</Link>
           </div>
         </div>
         <div className="copyright">

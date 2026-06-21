@@ -20,6 +20,12 @@ export const packageList: PackageProps[] = [
       "A simple and reproducible way of using fonts in matplotlib",
   },
   {
+    packageName: "ninejs",
+    isBeta: true,
+    packageLang: "Python",
+    packageDescription: "Bringing ✨interactivity✨ to plotnine ",
+  },
+  {
     packageName: "morethemes",
     isBeta: false,
     packageLang: "Python",
@@ -38,13 +44,6 @@ export const packageList: PackageProps[] = [
     packageDescription: "Calendar heatmaps with matplotlib",
   },
   {
-    packageName: "plotjs",
-    isBeta: true,
-    packageLang: "Python",
-    packageDescription:
-      "Turn static matplotlib charts into interactive web visualizations",
-  },
-  {
     packageName: "bumplot",
     isBeta: false,
     packageLang: "Python",
@@ -55,6 +54,13 @@ export const packageList: PackageProps[] = [
     isBeta: true,
     packageLang: "Python",
     packageDescription: "Simulate colorblindness in Python charts",
+  },
+  {
+    packageName: "ggalttext",
+    isBeta: true,
+    packageLang: "R",
+    packageDescription:
+      "Automatically generate alternative text from ggplot2 charts",
   },
   {
     packageName: "r2typ",
