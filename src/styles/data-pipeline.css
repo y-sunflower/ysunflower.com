@@ -153,3 +153,58 @@
     min-width: 980px;
   }
 }
+
+@media (max-width: 768px) {
+  .pipeline-flow-shell {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .pipeline-flow-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    min-width: 0;
+  }
+
+  .flow-node {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  .flow-node h3 {
+    font-size: 1.2rem;
+  }
+
+  .flow-chip {
+    width: 100%;
+  }
+
+  .flow-connector {
+    width: 100%;
+    min-height: 3rem;
+  }
+
+  .flow-track {
+    width: 2px;
+    height: 100%;
+  }
+
+  .flow-dot {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: dotFlowVertical;
+  }
+}
+
+@keyframes dotFlowVertical {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: calc(100% - 8px);
+  }
+}
