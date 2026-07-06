@@ -20,7 +20,11 @@ const Header: React.FC = () => {
       <div className="container header-content">
         <Link href="/#" onClick={closeMenu}>
           <span className="name" style={{ fontSize: "1.5em" }}>
-            <img src="/logo.png" alt="Yellow sunflower logo" className="header-logo rotate" />
+            <img
+              src="/logo.png"
+              alt="Yellow sunflower logo"
+              className="header-logo rotate"
+            />
             <span className="highlight">yellow</span>{" "}
             <span className="highlight-secondary">sunflower</span>
           </span>
@@ -39,7 +43,7 @@ const Header: React.FC = () => {
         <nav className={isMenuOpen ? "active" : ""}>
           <ul id="navMenu">
             <li>
-              <Link href="/#consulting" onClick={closeMenu}>
+              <Link href="/#contact" onClick={closeMenu}>
                 consulting
               </Link>
             </li>

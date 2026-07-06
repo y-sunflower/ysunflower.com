@@ -62,9 +62,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div style={{ marginTop: "5rem" }}>
-          <Companies />
-        </div>
       </section>
 
       <div
