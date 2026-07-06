@@ -1,4 +1,3 @@
-import Companies from "../../components/Companies";
 import Link from "next/link";
 import "../../styles/about.css";
 
